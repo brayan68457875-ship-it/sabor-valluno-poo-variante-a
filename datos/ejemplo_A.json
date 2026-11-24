@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "nombre": "Sabor Valluno",
+  "reglas": {
+    "codigo": "A",
+    "decisiones": {
+      "conteo_productos_c": "hojas",
+      "promo_dentro_combos": false,
+      "top_productos": "lineas",
+      "consultas_confirmadas": false
+    }
+  },
+  "productos": [
+    {
+      "id_producto": 1,
+      "nombre": "Silpancho",
+      "clase": "Plato",
+      "precio_base": "35.00",
+      "dias_venta": [
+        "domingo",
+        "jueves",
+        "lunes",
+        "martes",
+        "miercoles",
+        "sabado",
+        "viernes"
+      ]
+    },
+    {
+      "id_producto": 2,
+      "nombre": "Pique macho",
+      "clase": "Plato",
+      "precio_base": "45.00",
+      "dias_venta": [
+        "domingo",
+        "jueves",
+        "lunes",
+        "martes",
+        "miercoles",
+        "sabado",
+        "viernes"
+      ]
+    },
+    {
+      "id_producto": 3,
+      "nombre": "Chicharrón",
+      "clase": "Plato",
+      "precio_base": "40.00",
+      "dias_venta": [
+        "domingo"
+      ]
+    },
+    {
+      "id_producto": 4,
+      "nombre": "Sopa de maní",
+      "clase": "Plato",
+      "precio_base": "15.00",
+      "dias_venta": [
+        "domingo",
+        "jueves",
+        "lunes",
+        "martes",
+        "miercoles",
+        "sabado",
+        "viernes"
+      ]
+    },
+    {
+      "id_producto": 5,
+      "nombre": "Mocochinchi vaso",
+      "clase": "Bebida",
+      "precio_vaso": "6.00",
+      "presentacion": "vaso",
+      "es_natural": true
+    },
+    {
+      "id_producto": 6,
+      "nombre": "Mocochinchi jarra",
+      "clase": "Bebida",
+      "precio_vaso": "6.00",
+      "presentacion": "jarra",
+      "es_natural": true
+    },
+    {
+      "id_producto": 7,
+      "nombre": "Gaseosa vaso",
+      "clase": "Bebida",
+      "precio_vaso": "5.00",
+      "presentacion": "vaso",
+      "es_natural": false
+    },
+    {
+      "id_producto": 8,
+      "nombre": "Combo silpancho y mocochinchi",
+      "clase": "Combo",
+      "componentes": [
+        1,
+        5
+      ]
+    },
+    {
+      "id_producto": 9,
+      "nombre": "Combo anidado familiar",
+      "clase": "Combo",
+      "componentes": [
+        8,
+        2
+      ]
+    }
+  ],
+  "clientes": [
+    {
+      "id_cliente": 1,
+      "nombre": "Cliente de demostración",
+      "telefono": "70000001",
+      "direccion": "Dirección ficticia, Cochabamba"
+    }
+  ],
+  "pedidos": [
+    {
+      "id_pedido": 1,
+      "id_cliente": 1,
+      "fecha_registro": "2026-11-23T17:26:06.256622",
+      "estado": "ENTREGADO",
+      "items": [
+        {
+          "id_detalle": 1,
+          "id_producto": 8,
+          "cantidad": 2,
+          "precio_unitario": "36.90",
+          "fecha_precio": "2026-11-23",
+          "importes": [
+            "36.90",
+            "73.80",
+            "110.70",
+            "147.60",
+            "184.50",
+            "221.40",
+            "258.30",
+            "295.20",
+            "332.10",
+            "369.00",
+            "405.90",
+            "442.80",
+            "479.70",
+            "516.60",
+            "553.50",
+            "590.40",
+            "627.30",
+            "664.20",
+            "701.10",
+            "738.00"
+          ],
+          "platos": 1,
+          "productos": 2,
+          "hojas_venta": {
+            "1": {
+              "nombre": "Silpancho",
+              "cantidad": 1
+            },
+            "5": {
+              "nombre": "Mocochinchi vaso",
+              "cantidad": 1
+            }
+          }
+        }
+      ],
+      "pago": {
+        "id_pago": 1,
+        "fecha": "2026-11-23T17:26:06.257625",
+        "monto_cobrado": "88.80",
+        "clase": "QR",
+        "codigo_transaccion": "0000000001"
+      },
+      "clase": "Delivery",
+      "zona": "Quillacollo",
+      "direccion_entrega": "Dirección ficticia de prueba",
+      "fecha_entrega": "2026-11-23T17:26:06.257625",
+      "limite_retraso_min": 60,
+      "tarifas": {
+        "Cercado": "8.00",
+        "Quillacollo": "15.00",
+        "Sacaba": "15.00",
+        "Vinto": "20.00"
+      }
+    }
+  ]
+}
