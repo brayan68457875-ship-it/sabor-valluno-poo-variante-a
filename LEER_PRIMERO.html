@@ -1,0 +1,372 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sabor Valluno · Variante A · Brayan Saravia Garay</title><style>body{font:17px/1.65 Arial,sans-serif;color:#203248;background:#edf2f7;margin:0}main{max-width:1150px;margin:auto;background:white;padding:44px 58px}h1{font-size:34px;color:#17466e}h2{margin-top:36px;color:#17466e}nav{position:sticky;top:0;background:#173e60;padding:12px;display:flex;flex-wrap:wrap;gap:20px}nav a{color:white;text-decoration:none}section{padding-top:25px;border-bottom:2px solid #e5ecf2;padding-bottom:35px}code{font-size:.9em;background:#eff3f7;padding:2px 5px}pre{overflow:auto;padding:20px;background:#eff3f7}pre code{padding:0}.tabla{overflow:auto}table{border-collapse:collapse;width:100%;font-size:15px}td{border:1px solid #d5dfe8;padding:10px}tr:first-child{font-weight:bold;background:#eaf1f7}blockquote{border-left:4px solid #86a5bf;padding:10px 20px;background:#f4f7fa}.punto{margin-left:15px}.aviso{padding:20px;background:#fff5db;border:1px solid #dec17d}img{max-width:100%;height:auto}@media print{body{background:white}main{padding:0;max-width:none}nav{display:none}h1,h2{break-after:avoid}tr{break-inside:avoid}section{border:0}a{color:inherit}}</style><nav><a href="#s0">Inicio</a><a href="#s1">Datos y pendientes</a><a href="#s2">Manual</a><a href="#s3">Requisitos</a><a href="#s4">Consultas</a><a href="#s5">IA</a><a href="#s6">Registro personal</a><a href="#s7">Defensa</a><a href="#s8">Git</a></nav><main><p class="aviso"><strong>Variante A asignada.</strong> Ingeniería de Sistemas, paralelo B. Docente: Ing. Roy Carrasco. Entrega: 24/11/2026. Institución, GitHub y consultas pendientes según documentación.</p><section id="s0"><h1>Sistema de pedidos Sabor Valluno · Variante A</h1>
+<p><strong>Estudiante:</strong> Brayan Saravia Garay   <strong>Carrera:</strong> Ingeniería de Sistemas   <strong>Asignatura:</strong> Programación Orientada a Objetos   <strong>Variante asignada:</strong> A   <strong>Paralelo:</strong> B   <strong>Docente:</strong> Ing. Roy Carrasco   <strong>Entrega:</strong> 24 de noviembre de 2026   <strong>Institución:</strong> pendiente de indicar.</p>
+<p>Aplicación de consola en Python para registrar productos, clientes, pedidos y pagos del restaurante ficticio Sabor Valluno. Conserva las clases del diagrama entregado y aplica exclusivamente la variante A, confirmada por Brayan el 23/11/2026. El paralelo del estudiante continúa siendo B.</p>
+<h2>Cómo ejecutarlo</h2>
+<p class="punto">1. Extraer el ZIP completo y abrir la carpeta <code>Sabor_Valluno_Variante_A</code> en VS Code.</p>
+<p class="punto">2. Usar Python 3.10 o posterior. No se instala nada con pip: todo utiliza la biblioteca estándar.</p>
+<p class="punto">3. Abrir una terminal dentro de esta carpeta y ejecutar:</p>
+<pre><code>
+python main.py --variante A --demo
+
+</code></pre>
+<p>En Windows también puede usarse <code>py -3</code> en lugar de <code>python</code>. <code>python main.py</code> inicia directamente con la variante A asignada. <code>--demo</code> carga productos y un cliente ficticios; omitirlo permite empezar sin registros. Esta entrega rechaza variantes distintas de A.</p>
+<pre><code>
+python pruebas.py
+
+python main.py --demo
+
+python main.py --cargar datos/restaurante.json
+
+</code></pre>
+<p>No ejecutar las pruebas con <code>-O</code>, porque ese modo elimina las comprobaciones <code>assert</code>.</p>
+<p>El menú permite registrar productos y combos, consultar el menú por día, registrar clientes, crear las tres modalidades de pedido, agregar/quitar productos, cambiar estados, cobrar, consultar el detalle, generar reportes y guardar/cargar JSON. La opción 15 permite agregar o quitar componentes de un combo. Los datos se conservan entre sesiones únicamente si se guardan en JSON.</p>
+<h2>Primera demostración</h2>
+<p>Con <code>python main.py --variante A --demo</code>, elegir 5 para crear un pedido del cliente 1, modalidad 3, zona Quillacollo y una dirección de ejemplo. Elegir 6, seleccionar el pedido 1, agregar el producto 8, cantidad 2. El comprobante mostrará Bs 73,80 de subtotal, Bs 15 de envío y Bs 88,80 de total. Elegir 9 y pagar con QR de diez dígitos o efectivo suficiente. Para entregarlo, elegir 8 sucesivamente con EN_PREPARACION, LISTO y ENTREGADO.</p>
+<p>La demostración usa los precios 35 y 6 que aparecen en la guía; los otros precios y el cliente son ficticios y están identificados en <code>datos_demo.py</code>.</p>
+<h2>Estructura de la entrega</h2>
+<pre><code>
+Sabor_Valluno_Variante_A/
+
+  main.py                    Menú de consola
+
+  restaurante.py             Registros, mesas, reportes y JSON
+
+  datos_demo.py              Datos ficticios para practicar
+
+  configuracion.json         Datos del estudiante y decisiones pendientes
+
+  pruebas.py                 Casos ejecutables con assert
+
+  modelo/
+
+    clientes.py              Cliente
+
+    productos.py             Producto, Plato, Bebida, Combo
+
+    pedidos.py               Pedido, Local, Llevar, Delivery,
+
+                             DetalleProducto y EstadoPedido
+
+    pagos.py                 MetodoPago, Efectivo, QR, Tarjeta
+
+    reglas.py                ReglasVariante, variante A
+
+    utilidades.py            Importes, fechas y validaciones
+
+  datos/                     Archivos JSON de ejemplo
+
+  docs/
+
+    diagrama_v1.png           Imagen del boceto proporcionado
+
+    diagrama_v2.png           Diagrama enriquecido actualizado
+
+    manual_del_proyecto.md   Explicación de funcionamiento y diseño
+
+    requisitos_y_evidencias.md
+
+    datos_y_pendientes.md
+
+    acta_consultas.md
+
+    bitacora_ia.md
+
+    registro_ia_saravia.md
+
+    defensa.md
+
+    inventario_clases.md
+
+    resultados_pruebas.txt
+
+    git_y_entrega.md
+
+</code></pre>
+<p>La fotografía del boceto se conserva como evidencia aportada por el usuario. No se afirma que esté firmada por el docente: esa verificación y la firma corresponden al estudiante y al docente.</p>
+<h2>Variante A asignada</h2>
+<div class="tabla"><table>
+<tr><td>Perfil</td><td>Combo</td><td>Envase para llevar</td><td>Envío gratis</td><td>Mínimo delivery</td><td>Particularidad</td></tr>
+<tr><td>A</td><td>10 %</td><td>Bs 2 por plato</td><td>Desde Bs 150, Cercado</td><td>Bs 40</td><td>Chicharrón solo domingo</td></tr>
+</table></div>
+<p>Las tarifas son Cercado 8, Quillacollo 15, Sacaba 15 y Vinto 20. En A, solo Cercado ofrece envío gratuito desde Bs 150 de subtotal. El mínimo de delivery es Bs 40. La variante queda fija en A.</p>
+<h2>Datos que faltan y límites de la entrega</h2>
+<p>Ya se incorporaron los datos personales que proporcionó Brayan. Faltan la institución y el enlace del repositorio. La variante asignada A ya está incorporada. Las consultas de reglas siguen sin confirmar por el docente. Ver <code>docs/datos_y_pendientes.md</code> y <code>docs/acta_consultas.md</code>.</p>
+<p>La interpretación pendiente del top 3 cuenta las líneas vendidas, incluidos combos como productos; puede configurarse para desglosar componentes. Las dudas de B y C ya no aplican a esta entrega A. No se atribuyen respuestas al docente.</p>
+<p>La regla de retraso de más de 60 minutos y devolución del costo de envío se obtuvo de la respuesta escrita en el propio documento. No se presenta como una consulta efectivamente realizada. La compensación se muestra como obligación calculada, no como una devolución bancaria real.</p>
+<p>Los diagramas y el código se prepararon con ayuda de IA. La bitácora registra esa ayuda y deja pendiente la revisión y comprensión personal. La firma, la defensa, las consultas reales, el historial de trabajo de semanas anteriores y la publicación en GitHub requieren actuaciones reales del estudiante; no se han fabricado.</p>
+<h2>Historial local de esta incorporación</h2>
+<p>Los archivos existentes se incorporan en ocho commits por componentes, todos con las fechas reales de esta sesión. Este historial no acredita semanas de trabajo anteriores. Consultar <code>docs/git_y_entrega.md</code>. El repositorio no se ha publicado en GitHub.</p></section><section id="s1"><h1>Datos y pendientes · variante A</h1>
+<div class="tabla"><table>
+<tr><td>Dato</td><td>Valor confirmado</td></tr>
+<tr><td>Estudiante</td><td>Brayan Saravia Garay</td></tr>
+<tr><td>Carrera</td><td>Ingeniería de Sistemas</td></tr>
+<tr><td>Asignatura</td><td>Programación Orientada a Objetos</td></tr>
+<tr><td>Paralelo</td><td>B</td></tr>
+<tr><td>Docente</td><td>Ing. Roy Carrasco</td></tr>
+<tr><td>Entrega</td><td>24/11/2026</td></tr>
+<tr><td>Variante asignada</td><td>A, informada por el estudiante el 23/11/2026</td></tr>
+</table></div>
+<p>La aplicación inicia directamente con A. El paralelo B no cambia la variante.</p>
+<p>Falta completar la institución y el enlace de GitHub. También corresponden al estudiante las firmas, los commits reales, la revisión del registro de IA y la defensa. El docente aún no confirmó las consultas: no se atribuyen respuestas ficticias.</p>
+<p>En A no aplican las dudas sobre el envase por producto de C ni el 2×1 de B. Sí queda por confirmar el criterio del top 3 (propuesta: líneas vendidas, fecha del cobro), la consulta real de retraso y el bloqueo de edición después de cobrar. El código usa la respuesta de retraso incluida en el documento: más de 60 minutos y devolución del costo del envío.</p>
+<p>Las decisiones se editan en configuracion.json. Las claves heredadas conteo_productos_c y promo_dentro_combos se conservan por compatibilidad con la estructura del diagrama, pero no activan reglas de B/C: A cobra únicamente por platos y no tiene 2×1. consultas_confirmadas continúa en false.</p></section><section id="s2"><h1>Manual del proyecto Sabor Valluno</h1>
+<p>Brayan Saravia Garay · Ingeniería de Sistemas · Paralelo B   Ing. Roy Carrasco · Entrega 24 de noviembre de 2026</p>
+<h2>Problema y resultado esperado</h2>
+<p>Sabor Valluno registra pedidos de comida típica y necesita calcular correctamente combos, envases, envíos y cobros. Una suma manual puede olvidar que un combo contiene otros productos o que un envío cambia según la zona. El programa reúne esas reglas en objetos y permite atender un pedido completo desde su registro hasta su entrega.</p>
+<p>El resultado es una aplicación de consola, sin paquetes externos, con las clases del diagrama suministrado. Aplica la variante A, confirmada por Brayan el 23/11/2026; la versión anterior con seis perfiles se reemplaza para esta entrega. Las decisiones no confirmadas se conservan identificadas en el acta.</p>
+<h2>Objetivos</h2>
+<p>El objetivo general es administrar el ciclo de pedidos con un modelo coherente de programación orientada a objetos. Los objetivos específicos son registrar el menú y los clientes, calcular importes recursivos, validar estados y pagos, separar los cargos por modalidad, generar reportes diarios y conservar la información en JSON.</p>
+<h2>Cómo se distribuyen las responsabilidades</h2>
+<div class="tabla"><table>
+<tr><td>Clase</td><td>Responsabilidad y datos principales</td></tr>
+<tr><td>Restaurante</td><td>Registra productos, clientes y pedidos; evita mesas ocupadas; genera reportes; guarda y carga JSON.</td></tr>
+<tr><td>Cliente</td><td>Identificador, nombre, teléfono validado y dirección.</td></tr>
+<tr><td>Producto</td><td>Contrato abstracto común de precio, disponibilidad y conteo de platos.</td></tr>
+<tr><td>Plato</td><td>Precio base y días de venta; cuenta como un plato.</td></tr>
+<tr><td>Bebida</td><td>Precio por vaso, presentación y condición de refresco natural; jarra al triple del vaso, sin 2×1 en A; cuenta cero platos.</td></tr>
+<tr><td>Combo</td><td>Agrega productos compartidos, incluidos otros combos; aplica descuento y recorre componentes recursivamente.</td></tr>
+<tr><td>Pedido</td><td>Cliente, fecha, estado, detalles y pago; controla edición, subtotal, total y transiciones.</td></tr>
+<tr><td>Local</td><td>Mesa de 1 a 15; sin cargos adicionales ni descuento local.</td></tr>
+<tr><td>Llevar</td><td>Envases: Bs 2 por cada plato, incluidos los de combos anidados.</td></tr>
+<tr><td>Delivery</td><td>Zona, dirección, tarifas y fecha de entrega; verifica mínimo, medios de pago y retraso.</td></tr>
+<tr><td>DetalleProducto</td><td>Producto, cantidad y cotización histórica; calcula el subtotal y las promociones de la línea.</td></tr>
+<tr><td>MetodoPago</td><td>Contrato abstracto del procesamiento del cobro.</td></tr>
+<tr><td>Efectivo</td><td>Monto recibido suficiente y cambio; sin redondeo adicional en A.</td></tr>
+<tr><td>QR</td><td>Código de transacción de diez dígitos.</td></tr>
+<tr><td>Tarjeta</td><td>Comisión de 3 % y rechazo para delivery mediante comportamiento polimórfico.</td></tr>
+<tr><td>EstadoPedido</td><td>Enumeración de los cinco estados permitidos.</td></tr>
+<tr><td>ReglasVariante</td><td>Valores de A y criterio configurable del reporte; evita esparcir tasas fijas en las clases de pedidos.</td></tr>
+</table></div>
+<p>Los nombres <code>Local</code>, <code>Llevar</code>, <code>Delivery</code>, <code>Combo</code>, <code>Efectivo</code>, <code>QR</code> y <code>Tarjeta</code> se conservan del boceto. <code>Pago</code> se precisó como <code>MetodoPago</code> para ajustarse a la guía; <code>Detalle Producto</code> se escribe <code>DetalleProducto</code> por la convención de nombres de clases de Python.</p>
+<h2>Relaciones del diagrama</h2>
+<p>Un cliente puede realizar varios pedidos; cada pedido tiene un cliente. El restaurante registra muchos productos, clientes y pedidos. Un pedido compone sus detalles: un detalle pertenece a ese pedido y no se reutiliza en otro. Cada detalle referencia un producto del menú.</p>
+<p>Un combo agrega productos compartidos: el mismo plato puede aparecer en varios combos y también venderse por separado. Por eso la relación usa agregación, no composición que sugiera que al eliminar el combo desaparece el plato. La relación con <code>Producto</code> permite incluir otro <code>Combo</code> sin añadir una clase especial para combos anidados.</p>
+<p>Cada pedido puede estar sin pagar o tener un solo pago. Las tres familias usan herencia con un triángulo dirigido hacia su clase abstracta. <code>EstadoPedido</code> expresa el estado mediante valores limitados, mientras <code>ReglasVariante</code> se comparte por referencia dentro del contexto.</p>
+<h2>Evidencia de los cuatro pilares</h2>
+<p><strong>Abstracción.</strong> <code>Producto</code>, <code>Pedido</code> y <code>MetodoPago</code> heredan de <code>ABC</code>. Los métodos decorados con <code>@abstractmethod</code> expresan qué deben implementar sus descendientes. Intentar instanciarlas directamente produce <code>TypeError</code>, comprobado en las pruebas.</p>
+<p><strong>Herencia.</strong> Hay tres descendientes de cada clase abstracta: nueve subclases de dominio. Sus constructores llaman a <code>super().__init__()</code> y los campos comunes se definen en las bases. Por ejemplo, las modalidades de pedido no vuelven a declarar cliente, estado ni lista de detalles.</p>
+<p><strong>Encapsulación.</strong> Los campos de los objetos usan prefijo protegido <code>_</code>. Se accede mediante propiedades. Los precios y el teléfono tienen validaciones; las colecciones se exponen como tuplas, conjuntos inmutables o vistas de solo lectura. Devolver una tupla de detalles no bastaría si sus cantidades pudieran cambiar sin control: cada <code>DetalleProducto</code> conserva una función de validación del pedido y la ejecuta antes de cambiar cantidad.</p>
+<p><strong>Polimorfismo.</strong> <code>Pedido</code> suma los subtotales de sus detalles; no pregunta si un producto es plato, bebida o combo. <code>Combo</code> llama a <code>calcular_precio()</code>, <code>esta_disponible()</code> y <code>contar_platos()</code> de cada componente. <code>Delivery</code> pregunta <code>permite_delivery()</code> al método de pago en vez de comprobar si el objeto es una tarjeta. Las tasas de A se resuelven con datos, no con condicionales de clases dentro de las jerarquías.</p>
+<p>Los diccionarios de fábricas de <code>main.py</code> y de carga JSON traducen elecciones textuales a constructores. Esa decisión en la frontera de entrada no reemplaza el polimorfismo del cálculo: una vez creado el objeto, los métodos del modelo trabajan con su contrato común.</p>
+<h2>Precios, promociones y total</h2>
+<p>Todos los importes se almacenan como <code>Decimal</code> y se redondean a dos decimales con <code>ROUND_HALF_UP</code>. Se construyen desde texto para evitar errores de números binarios en operaciones monetarias. El precio unitario debe ser positivo.</p>
+<p>Un vaso utiliza su precio base y la jarra cuesta tres veces ese valor. En A, un combo suma los precios de sus componentes y descuenta 10 % en cada nivel, incluidos combos anidados. Requiere al menos dos componentes y no tiene el máximo de cuatro de C. No hay descuentos fijos ni promociones 2×1.</p>
+<p>El detalle conserva la cotización que existía al agregar el producto. Guarda importes para las cantidades 1–20 y los conteos necesarios: así un cambio posterior en el menú no altera un pedido anterior. Esto también conserva el efecto de una promoción por cantidad, que no siempre se puede representar multiplicando un precio fijo.</p>
+<p>En A no hay 2×1 del martes. Las cantidades iguales del mismo producto se consolidan en una línea y se respeta el límite de 1 a 20.</p>
+<p>La fórmula usada es:</p>
+<pre><code>
+subtotal del pedido = suma de subtotales de detalles, ya con promociones
+
+total del pedido = subtotal − descuento local + envases o envío
+
+importe cobrado = total + comisión de tarjeta si corresponde (efectivo y QR: sin ajuste)
+
+</code></pre>
+<p>El descuento de combo ya está incorporado en el precio del producto y no se vuelve a descontar al cerrar el pedido. La comisión de tarjeta se aplica una sola vez al cobrar. El comprobante separa subtotal, descuento de pedido, cargos, total y ajuste de cobro.</p>
+<h2>Caso de referencia recalculado</h2>
+<p>Silpancho Bs 35 y mocochinchi vaso Bs 6 suman Bs 41. Se venden dos combos por delivery a Quillacollo, donde el envío vale Bs 15. El caso se evalúa fuera de una promoción de martes.</p>
+<div class="tabla"><table>
+<tr><td>Perfil</td><td>Cálculo de un combo</td><td>Precio combo</td><td>Total de dos con envío</td></tr>
+<tr><td>A</td><td>41 × 0,90</td><td>36,90</td><td>88,80</td></tr>
+</table></div>
+<p>En A, efectivo y QR mantienen el total de Bs 88,80. La tarjeta añade 3 % para modalidades admitidas, pero delivery solo permite Efectivo o QR.</p>
+<p>Para un combo anidado de A, el combo de Bs 36,90 más otro silpancho de Bs 35 suman 71,90; con 10 % quedan 64,71. Contiene dos platos y una bebida. Dos unidades para llevar cuestan 129,42 más cuatro envases de Bs 2: total Bs 137,42.</p>
+<h2>Disponibilidad y envases</h2>
+<p>Cada plato tiene días de venta. En A, el chicharrón solo se vende los domingos. Los otros platos se registran con sus días de venta; sin restricción adicional se ofrecen todos los días. Un combo solo está disponible si lo están todos sus componentes.</p>
+<p>El pedido utiliza el día de su fecha de registro. Una consulta del menú para otro día es informativa y no modifica esa fecha.</p>
+<p>En A se cobra Bs 2 por cada plato, incluidos los platos de combos anidados. Las bebidas no generan envase. El conteo recorre recursivamente los componentes mediante contar_platos().</p>
+<h2>Estados y mesas</h2>
+<p>El flujo normal es REGISTRADO → EN_PREPARACION → LISTO → ENTREGADO. CANCELADO solo se alcanza desde REGISTRADO. Un salto, una vuelta atrás o una edición después de comenzar la preparación produce <code>ValueError</code>.</p>
+<p>El registro puede comenzar sin productos, pero no se confirma ni se cobra vacío. El mínimo de delivery se verifica al confirmar o cobrar, para permitir construir el pedido agregando productos en varias operaciones. Una cotización por debajo del mínimo puede mostrarse, pero todavía no puede confirmarse.</p>
+<p>La mesa debe estar entre 1 y 15. <code>Restaurante</code> revisa los pedidos abiertos antes de registrar otro en esa mesa. Entregar o cancelar libera la mesa. Cobrar no la libera automáticamente porque un pedido pagado todavía puede estar en preparación.</p>
+<p>Por consistencia de esta implementación, un pedido cobrado ya no admite edición ni cancelación simple, aunque permanezca REGISTRADO. La guía no define un circuito de reembolsos por cancelación después de cobrar; esa decisión adicional está incluida en las consultas pendientes.</p>
+<h2>Pagos y compensación</h2>
+<p>Efectivo valida que el monto recibido cubra el total y conserva el cambio. QR requiere diez dígitos ASCII; se conserva como texto para no perder ceros iniciales. El gestor rechaza identificadores de pago repetidos y códigos QR ya utilizados. Tarjeta cobra 3 % adicional y responde <code>False</code> a <code>permite_delivery()</code>.</p>
+<p>Se trata de una simulación académica. No se conectan bancos, pasarelas ni lectores QR; el código de transacción se registra manualmente. No se guardan números completos de tarjeta ni datos bancarios.</p>
+<p>La fuente proporcionada incluye como respuesta que existe retraso cuando pasan más de 60 minutos desde el registro y corresponde devolver el costo del envío. A los 60 minutos exactos no hay compensación. Un envío que ya era gratuito produce compensación de Bs 0, porque ese fue el importe cobrado por envío.</p>
+<p><code>calcular_retraso()</code> devuelve minutos que exceden el límite. <code>calcular_compensacion()</code> devuelve el importe que correspondería reembolsar. El sistema lo informa, pero no acredita que el dinero haya sido devuelto. El acta mantiene pendiente la consulta real al docente.</p>
+<h2>Reportes</h2>
+<p>El reporte diario incluye los pedidos cobrados en la fecha del pago, agrupados por local, llevar y delivery. Presenta número de pedidos, suma de totales comerciales, dinero efectivamente cobrado y compensación calculada. Esta separación evita confundir la comisión de tarjeta con el total del pedido.</p>
+<p>El top 3 ordena por cantidad descendente y, ante empate, por identificador ascendente. Con el criterio propuesto <code>lineas</code>, un combo vendido cuenta como combo; con <code>hojas</code>, se desglosan sus productos finales. No se cuentan pedidos cancelados ni pendientes de cobro. La interpretación comercial debe confirmarse antes de afirmar que es la exigida por el docente.</p>
+<h2>Persistencia JSON</h2>
+<p>Guardar exporta el perfil activo, las decisiones, productos, componentes de combos, clientes, pedidos, cotizaciones, estados, pagos y fechas. Los <code>Decimal</code> se escriben como texto y las fechas en formato ISO. La escritura usa un archivo temporal y reemplazo final para reducir el riesgo de dejar un archivo incompleto.</p>
+<p>Cargar construye un restaurante nuevo y solo lo sustituye en el menú cuando todo termina correctamente. Primero reconstruye los productos resolviendo las dependencias de combos. Si no puede avanzar, informa de referencias faltantes o ciclos. Luego carga clientes y pedidos y verifica los cobros almacenados. No ejecuta una transacción bancaria.</p>
+<p>El JSON conserva las cotizaciones históricas y sus propias decisiones. Editar <code>configuracion.json</code> no cambia automáticamente un archivo guardado. Se incluye <code>datos/ejemplo_A.json</code> con datos ficticios de la variante A.</p>
+<h2>Validación y entrega personal</h2>
+<p><code>pruebas.py</code> contiene casos con <code>assert</code> para la referencia A y sus límites, recursión, ciclos, disponibilidad, promociones, envases, mínimos, límites, estados, cobro, reportes y JSON. El resultado real de la ejecución se encuentra en <code>resultados_pruebas.txt</code>.</p>
+<p>El código y los documentos no sustituyen la revisión del estudiante. Brayan debe completar los datos pendientes, confirmar las consultas, declarar el uso de IA, conservar el proceso real y practicar la defensa. El proyecto no incluye commits retroactivos, firmas ni respuestas docentes inventadas.</p></section><section id="s3"><h1>Requisitos de la guía y evidencia entregada</h1>
+<div class="tabla"><table>
+<tr><td>Requisito</td><td>Evidencia concreta</td><td>Estado</td></tr>
+<tr><td>Diagrama v1</td><td><code>diagrama_v1.png</code>: fotografía aportada</td><td>Aportado; firma/verificación docente pendiente</td></tr>
+<tr><td>Diagrama v2 enriquecido</td><td><code>diagrama_v2.png</code> y notas de cambios</td><td>Incluido</td></tr>
+<tr><td>Tres clases abstractas</td><td>Producto, Pedido y MetodoPago con ABC y abstractmethod</td><td>Implementado y probado</td></tr>
+<tr><td>Nueve subclases y super</td><td>Tres subclases por jerarquía</td><td>Implementado</td></tr>
+<tr><td>Atributos protegidos y propiedades</td><td>Modelo y vistas de solo lectura</td><td>Implementado y probado</td></tr>
+<tr><td>Polimorfismo sin decidir por tipo</td><td>Producto/Combo/Pedido y permite_delivery</td><td>Implementado; prueba AST adicional</td></tr>
+<tr><td>Combo recursivo y sin ciclos</td><td>Combo y pruebas de anidamiento/ciclos</td><td>Implementado y probado</td></tr>
+<tr><td>Registrar productos y combos</td><td>Opciones 1 y 15</td><td>Implementado</td></tr>
+<tr><td>Menú disponible por día</td><td>Opción 2</td><td>Implementado</td></tr>
+<tr><td>Registrar clientes y validar teléfono</td><td>Opción 3</td><td>Implementado y probado</td></tr>
+<tr><td>Tres modalidades de pedido</td><td>Opción 5</td><td>Implementado</td></tr>
+<tr><td>Agregar/quitar solo en REGISTRADO</td><td>Opción 6; validación en Pedido/DetalleProducto</td><td>Implementado y probado</td></tr>
+<tr><td>Desglose monetario</td><td>Opción 7, comprobante</td><td>Implementado</td></tr>
+<tr><td>Transiciones y cancelación</td><td>Opción 8</td><td>Implementado y probado</td></tr>
+<tr><td>Efectivo, QR y Tarjeta; restricciones delivery</td><td>Opción 9</td><td>Implementado y probado</td></tr>
+<tr><td>Reporte por modalidad y top 3</td><td>Opción 10</td><td>Implementado; criterio pendiente de confirmación</td></tr>
+<tr><td>JSON opcional</td><td>Opciones 11 y 12</td><td>Implementado y probado</td></tr>
+<tr><td>Variante A asignada</td><td>ReglasVariante, configuración e inicio directo</td><td>Confirmada por el estudiante e implementada</td></tr>
+<tr><td>Casos con assert, mínimo 8</td><td>pruebas.py; referencias recalculadas y combo anidado</td><td>Incluido, resultado real adjunto</td></tr>
+<tr><td>Retraso y compensación</td><td>Delivery; frontera 60/61 minutos</td><td>Implementado según respuesta incluida en la guía; consulta real pendiente</td></tr>
+<tr><td>Código de consola y biblioteca estándar</td><td>main.py y módulos del proyecto</td><td>Incluido, sin pip</td></tr>
+<tr><td>Bitácora de IA</td><td>bitacora_ia.md</td><td>Usos de esta sesión registrados; revisión personal pendiente</td></tr>
+<tr><td>Registro por estudiante</td><td>registro_ia_saravia.md</td><td>Preparado con usos conocidos; comprensión y firma pendientes</td></tr>
+<tr><td>Acta de consultas</td><td>acta_consultas.md</td><td>Preguntas preparadas; sin respuestas docentes confirmadas</td></tr>
+<tr><td>Git y GitHub</td><td>.gitignore y git_y_entrega.md</td><td>Ocho bloques de importación local en esta sesión; URL/publicación y evidencias temporales personales pendientes</td></tr>
+<tr><td>Commits en semanas anteriores</td><td>Evidencia que debe aportar el estudiante</td><td>No se fabrica</td></tr>
+<tr><td>Defensa individual sin IA</td><td>defensa.md</td><td>Preparación incluida; ejecución corresponde al estudiante</td></tr>
+</table></div>
+<p>La guía describe fases sin IA y una defensa personal. Esta entrega se identifica como material generado con asistencia de IA: no se presenta como evidencia de haber realizado esas fases de forma presencial ni de haber obtenido aprobación docente.</p></section><section id="s4"><h1>Acta de consultas al docente</h1>
+<p>Estudiante: Brayan Saravia Garay   Paralelo: B   Docente: Ing. Roy Carrasco   Fecha de entrega: 24/11/2026   Variante: <strong>A, informada por el estudiante</strong>. Las consultas de negocio restantes siguen pendientes.</p>
+<p>El estudiante informó que el docente no confirmó estas cuestiones. Esta acta prepara las preguntas; no acredita una conversación que no ocurrió.</p>
+<div class="tabla"><table>
+<tr><td>N.º</td><td>Fecha real de consulta</td><td>Pregunta para el docente</td><td>Respuesta real</td><td>Situación del proyecto</td></tr>
+<tr><td>1</td><td>23/11/2026, comunicación del estudiante</td><td>Variante asignada</td><td>Brayan informa variante A. No se atribuye una consulta directa al docente.</td><td>Configuración A incorporada.</td></tr>
+<tr><td>4</td><td>Pendiente</td><td>Para el top 3, ¿cada combo cuenta como producto vendido o se desglosan sus componentes? ¿El día corresponde al cobro?</td><td>Pendiente</td><td>Propuesta actual: líneas, fecha del cobro; empates por id ascendente. Conteo configurable.</td></tr>
+<tr><td>5</td><td>Pendiente</td><td>¿Se confirma que delivery tiene retraso después de 60 minutos desde el registro y se devuelve el costo del envío?</td><td>Pendiente</td><td>Ese criterio figura como respuesta en el documento y se implementó según esa fuente; falta registrar la confirmación real.</td></tr>
+<tr><td>6</td><td>Pendiente</td><td>¿Está de acuerdo con conservar la cotización al agregar un producto y bloquear edición/cancelación después de cobrar?</td><td>Pendiente</td><td>Medida explícita de consistencia contable de esta implementación.</td></tr>
+<tr><td>7</td><td>Pendiente</td><td>El documento dice 3 semanas, pero detalla semanas 1–4. ¿Cuál es el calendario aplicable?</td><td>Pendiente</td><td>Se usa únicamente la fecha de entrega indicada por el estudiante, sin reconstruir semanas.</td></tr>
+</table></div>
+<p>Después de consultar: escribir la fecha, sustituir «Pendiente» por la respuesta literal o una paráfrasis fiel, aplicar los cambios necesarios, actualizar las pruebas y volver a ejecutarlas. No cambiar <code>consultas_confirmadas</code> a <code>true</code> solo para ocultar el aviso.</p>
+<p>Firma del estudiante: ____________________   Verificación del docente, si corresponde: ____________________</p></section><section id="s5"><h1>Bitácora de uso de IA</h1>
+<p>Estudiante: Brayan Saravia Garay   Herramienta: Codex de OpenAI   Fecha de preparación de esta entrega: 22/11/2026   Proyecto: Sabor Valluno, variante A.</p>
+<p>Esta bitácora se centra en la generación del proyecto y su adaptación a la variante A. No acredita comprensión personal del código ni revisión por parte del estudiante.</p>
+<h2>Intervención 1</h2>
+<p><strong>Fecha:</strong> 22/11/2026, sesión actual   <strong>Tipo:</strong> Generación de proyecto   <strong>Consulta textual:</strong></p>
+<blockquote>ahora quiero que me lo hagas todo lo qeu esta solicitando el documento, y me infromes lo que tiene que tener mis datos , todo siempre en base al diagrama  que me proporcionaste</blockquote>
+<p><strong>Resultado producido por la herramienta:</strong> Se generaron código, pruebas, manuales y registros a partir del diagrama; las consultas docentes y evidencias personales siguen pendientes.   <strong>Qué aceptó personalmente el estudiante:</strong> pendiente de su revisión; el uso del diagrama como base sí fue solicitado.   <strong>Qué modificó personalmente y por qué:</strong> pendiente de completar con acciones reales.   <strong>Archivos afectados:</strong> modelo/, restaurante.py, main.py, pruebas.py y docs/.   <strong>¿Lo explica sin ayuda?:</strong> pendiente de comprobar por Brayan.</p>
+<h2>Alcance de la declaración</h2>
+<p>La ayuda incluyó generación de código, pruebas y documentos, además de aclaraciones de diseño. No debe registrarse únicamente como «corrección de errores». Las pruebas ejecutadas por la herramienta no sustituyen la revisión del estudiante. Brayan puede añadir todas sus consultas posteriores aquí y en su registro personal, conservando el texto, lo aceptado, lo cambiado y la razón.</p>
+<h2>Actualización del 23/11/2026 · Variante asignada A</h2>
+<p>Herramienta: Codex de OpenAI. Tipo: adaptación de código, pruebas y documentación.</p>
+<p>Consulta textual:</p>
+<blockquote>ya tengo el dato de la variante ,quiero que lo hagas con la variante A</blockquote>
+<p>Se preparó una entrega exclusiva A: inicio directo, reglas A, diagrama, ejemplos y pruebas enfocados en A. La variante la informó el estudiante; no se registra como respuesta directa obtenida del docente. Las consultas de negocio continúan pendientes. Aceptación y comprensión personal del código: pendientes de revisión por Brayan.</p>
+<h2>Registro de incorporación a Git · 23/11/2026</h2>
+<p>Herramienta: Codex de OpenAI. Tipo: organización del repositorio y ejecución de commits locales.</p>
+<p>Consulta textual:</p>
+<blockquote>muy bien ahora en vscode del sistema de sabor valluno , abre y realiza minimamente 8 commits como esta solicitando el documento</blockquote>
+<p>Se organizó la incorporación del proyecto existente en ocho bloques de archivos. Los commits usan las fechas actuales de Git y la identidad indicada por el usuario. No representan desarrollo en semanas anteriores. Se verificó la ejecución de 31 pruebas. Revisión y comprensión personal del estudiante: pendientes.</p></section><section id="s6"><h1>Registro personal de uso de IA</h1>
+<p>Estudiante: Brayan Saravia Garay   Variante asignada: A, informada por Brayan el 23/11/2026   Paralelo: B   Semana/fase real: pendiente de completar por el estudiante   Docente: Ing. Roy Carrasco</p>
+<p>Este registro se centra en la generación del proyecto y su adaptación a la variante A. Las valoraciones de comprensión y las decisiones de aceptación corresponden a Brayan y siguen pendientes de revisión.</p>
+<div class="tabla"><table>
+<tr><td>N.º</td><td>Fecha</td><td>Herramienta</td><td>Tipo</td><td>Consulta textual</td><td>Qué acepté</td><td>Qué modifiqué y por qué</td><td>Archivo o clase</td><td>¿Lo explico sin ayuda?</td></tr>
+<tr><td>1</td><td>22/11/2026</td><td>Codex de OpenAI</td><td>Generación de proyecto</td><td>ahora quiero que me lo hagas todo lo qeu esta solicitando el documento, y me infromes lo que tiene que tener mis datos , todo siempre en base al diagrama  que me proporcionaste</td><td>Pendiente de revisión personal</td><td>Pendiente de completar con cambios reales</td><td>Código, pruebas y docs</td><td>Pendiente</td></tr>
+</table></div>
+<h2>Declaración que se firma después de revisar</h2>
+<p>Declaro haber revisado los usos de IA descritos en este registro y poder explicar el código que entrego.</p>
+<p><strong>Estado de la declaración:</strong> pendiente de revisión y firma del estudiante; la herramienta no afirma que ya se haya cumplido.</p>
+<p>Firma: ____________________   Fecha real de firma: ____________________</p>
+<p>Añadir nuevas filas para cada uso posterior. Si hay otros usos no reflejados en esta conversación, incorporarlos antes de firmar.</p>
+<h2>Actualización del 23/11/2026 · Variante asignada A</h2>
+<p>Herramienta: Codex de OpenAI. Tipo: adaptación de código, pruebas y documentación.</p>
+<p>Consulta textual:</p>
+<blockquote>ya tengo el dato de la variante ,quiero que lo hagas con la variante A</blockquote>
+<p>Se preparó una entrega exclusiva A: inicio directo, reglas A, diagrama, ejemplos y pruebas enfocados en A. La variante la informó el estudiante; no se registra como respuesta directa obtenida del docente. Las consultas de negocio continúan pendientes. Aceptación y comprensión personal del código: pendientes de revisión por Brayan.</p>
+<h2>Registro de incorporación a Git · 23/11/2026</h2>
+<p>Herramienta: Codex de OpenAI. Tipo: organización del repositorio y ejecución de commits locales.</p>
+<p>Consulta textual:</p>
+<blockquote>muy bien ahora en vscode del sistema de sabor valluno , abre y realiza minimamente 8 commits como esta solicitando el documento</blockquote>
+<p>Se organizó la incorporación del proyecto existente en ocho bloques de archivos. Los commits usan las fechas actuales de Git y la identidad indicada por el usuario. No representan desarrollo en semanas anteriores. Se verificó la ejecución de 31 pruebas. Revisión y comprensión personal del estudiante: pendientes.</p></section><section id="s7"><h1>Preparación para la defensa individual</h1>
+<p>Brayan Saravia Garay · POO · Paralelo B · Ing. Roy Carrasco</p>
+<h2>Explicar el diagrama en dos minutos</h2>
+<p>Describir primero el recorrido: Restaurante registra un Cliente; el cliente tiene un Pedido; el pedido compone DetalleProducto; cada detalle referencia un Producto. Después mostrar las tres jerarquías y explicar por qué Producto, Pedido y MetodoPago son abstractas. Cerrar con Combo agregando Producto para admitir anidamientos y con ReglasVariante separando los variante A.</p>
+<p>Explicar los cambios respecto al papel: nombres precisados, gestor añadido, estados explícitos, tipos y visibilidad, composición de detalles, agregación de componentes, métodos sobrescritos y reglas configurables. Usar los archivos reales; no memorizar una explicación que no se pueda relacionar con el código.</p>
+<h2>Preparar una explicación de código de tres minutos</h2>
+<p>Practicar con <code>Combo.calcular_precio()</code>: recorre componentes, cada uno responde su precio, suma los importes y aplica el perfil. Si un componente es otro combo, la misma llamada continúa recursivamente. No se pregunta por su clase.</p>
+<p>Practicar <code>Pedido.agregar_producto()</code>: comprueba edición, cantidad, configuración y disponibilidad. Si la línea ya existe, consolida la cantidad; si no, crea un detalle con cotización. Explicar por qué la lista se devuelve como tupla y por qué el detalle también necesita validar su edición.</p>
+<p>Practicar <code>Delivery.validar_pago()</code>: delega la compatibilidad al método de pago. Explicar cómo Tarjeta devuelve False sin introducir condiciones por clase en Pedido.</p>
+<p>Explicar con palabras propias <code>ABC</code>, <code>@abstractmethod</code>, <code>@property</code>, <code>Decimal</code>, <code>Enum</code>, las fábricas de carga JSON y el guardado de cotizaciones. Si alguna construcción no se estudió en clase, revisarla antes de defenderla.</p>
+<h2>Traza de combo anidado</h2>
+<p>En A, silpancho 35 + mocochinchi 6 suman 41; con 10 % quedan 36,90. Un combo exterior agrega ese combo y pique macho 45: (36,90 + 45) × 0,90 = 73,71. Ambos niveles descuentan 10 %. El exterior contiene dos platos y una bebida.</p>
+<p>Contar platos a mano: el combo interior tiene uno; el exterior añade otro, por lo que tiene dos. Contar los componentes finales: dos platos y una bebida. Mostrar después que las pruebas producen el mismo resultado.</p>
+<h2>Ejercicios de modificación sin IA</h2>
+<p class="punto">1. Añadir una zona: preparar un diccionario de tarifas con Tiquipaya a Bs 18 y pasarlo al constructor de Delivery. No cambiar Combo ni las clases de productos. En A el envío gratis sigue limitado a Cercado; la nueva zona no es gratuita.</p>
+<p class="punto">2. Diseñar Postre heredando de Producto: almacenar precio base y condición de crema; calcular precio base más Bs 3 si lleva crema; disponibilidad definida para el ejemplo; contar cero platos. Registrar el objeto y comprobar que Pedido y Combo lo usan sin cambios. El nuevo constructor debe llamar a super.</p>
+<p class="punto">3. Cambiar la comisión de tarjeta o el descuento de un perfil, localizar la prueba afectada y calcular primero el resultado esperado a mano.</p>
+<p class="punto">4. Predecir qué ocurre si un combo contiene a otro que intenta contener al primero; explicar la búsqueda <code>contiene()</code>.</p>
+<p>El ejercicio de Postre es una preparación de defensa, no una clase adicional entregada en el modelo actual. El documento exige que el estudiante haga el cambio en vivo y sin IA.</p>
+<h2>Lista personal antes de presentar</h2>
+<p>Ejecutar el sistema desde cero, repetir una venta completa, guardar/cargar, ejecutar pruebas, comprobar que la variante activa sea A y revisar las consultas pendientes. Poder justificar cada decisión del acta y reconocer lo que aún no confirmó el docente. Completar el registro de IA con la comprensión real; no firmar afirmaciones que todavía no se puedan sostener.</p></section><section id="s8"><h1>Git y entrega del proyecto</h1>
+<p>Esta carpeta utiliza un repositorio local en la rama <code>main</code>. Los ocho commits corresponden a la incorporación, por componentes, de un proyecto que ya existía. Se crean en la sesión actual, con las fechas reales registradas por Git. No se presentan como desarrollo distribuido en semanas anteriores.</p>
+<h2>Ocho bloques de incorporación</h2>
+<div class="tabla"><table>
+<tr><td>Bloque</td><td>Contenido</td></tr>
+<tr><td>1</td><td>Configuración de la variante A y exclusiones de Git</td></tr>
+<tr><td>2</td><td>Validaciones comunes, cliente y reglas A</td></tr>
+<tr><td>3</td><td>Jerarquía de productos y combos anidados</td></tr>
+<tr><td>4</td><td>Pedidos, detalles, estados y modalidades</td></tr>
+<tr><td>5</td><td>Efectivo, QR y tarjeta</td></tr>
+<tr><td>6</td><td>Gestor, menú de consola y demostración</td></tr>
+<tr><td>7</td><td>Pruebas y ejemplo JSON</td></tr>
+<tr><td>8</td><td>Diagramas, manuales y documentación del uso de IA</td></tr>
+</table></div>
+<p>El código y los materiales se generaron con asistencia de IA, declarada en los registros. Esta organización del historial no acredita por sí misma las fases presenciales, el calendario de commits de la guía, las consultas docentes ni la defensa individual.</p>
+<h2>Consultar el historial en VS Code</h2>
+<p>En Control de código fuente se puede revisar el gráfico o historial del repositorio. En una terminal del proyecto también se puede ejecutar:</p>
+<pre><code>
+git log --oneline --reverse
+
+git rev-list --count HEAD
+
+git status
+
+</code></pre>
+<p>Para ver la fecha real de cada commit:</p>
+<pre><code>
+git log --format=&quot;%h %ai %s&quot;
+
+</code></pre>
+<h2>GitHub</h2>
+<p>Los commits se guardan localmente. No se ha publicado este repositorio en GitHub y falta su URL. Una vez creado el repositorio remoto correcto, el estudiante puede añadirlo y publicarlo siguiendo su flujo de trabajo. No se modificó el proyecto distinto llamado «proyecto algebra».</p>
+<p>Las firmas, consultas y evidencias del trabajo personal siguen pendientes de las actuaciones reales que correspondan. Los cambios futuros deben producir commits que describan cambios efectivos; no se cambian fechas para simular trabajo anterior.</p></section><section><h1>Diagrama de la variante A</h1><a href="docs/diagrama_v2.png"><img src="docs/diagrama_v2.png" alt="Diagrama de clases variante A"></a><h2>Verificación técnica</h2><pre>VERIFICACIÓN DE LA ENTREGA VARIANTE A · 23/11/2026
+Brayan Saravia Garay
+
+OK   prueba_referencia_a
+OK   prueba_combo_anidado_y_envases
+OK   prueba_ciclo_directo_e_indirecto
+OK   prueba_disponibilidad_a_y_combo
+OK   prueba_transiciones_y_edicion
+OK   prueba_cancelacion
+OK   prueba_validaciones
+OK   prueba_mesa_unica_y_liberacion
+OK   prueba_qr_y_tarjeta
+OK   prueba_delivery_rechaza_tarjeta
+OK   prueba_pedido_cobrado_inmutable
+OK   prueba_retraso_frontera_y_compensacion
+OK   prueba_reporte_y_top
+OK   prueba_reporte_hojas_y_empates
+OK   prueba_precio_historico
+OK   prueba_colecciones_protegidas
+OK   prueba_json_corrupto_y_ciclo
+OK   prueba_ids_duplicados_y_pago_reutilizado
+OK   prueba_abstractas
+OK   prueba_importe_fuera_de_precision
+OK   prueba_polimorfismo_sin_comprobar_tipos
+OK   prueba_jarra_a_sin_promocion
+OK   prueba_envases_a_solo_platos
+OK   prueba_umbral_a_cercado
+OK   prueba_otras_zonas_a_siempre_cobran
+OK   prueba_minimo_a_40
+OK   prueba_efectivo_a_sin_redondeo_extra
+OK   prueba_a_rechaza_otras_variantes
+OK   prueba_json_a_tres_medios_y_cotizacion
+OK   prueba_delivery_a_retrasado_json
+OK   prueba_combo_a_minimo_sin_maximo_c
+
+Resultado: 31/31 casos aprobados.
+
+OK consola: inicio directo en A, pedido, 2 combos, QR, preparación, entrega, reporte y guardado. Total Bs 88,80.
+OK carga JSON: conserva importe y estado.
+OK selección inválida: --variante B se rechaza.
+Las consultas y firmas pendientes siguen indicadas; esta verificación no acredita actuaciones personales del estudiante.
+</pre></section></main></html>

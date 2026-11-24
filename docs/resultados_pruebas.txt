@@ -1,0 +1,41 @@
+VERIFICACIÓN DE LA ENTREGA VARIANTE A · 23/11/2026
+Brayan Saravia Garay
+
+OK   prueba_referencia_a
+OK   prueba_combo_anidado_y_envases
+OK   prueba_ciclo_directo_e_indirecto
+OK   prueba_disponibilidad_a_y_combo
+OK   prueba_transiciones_y_edicion
+OK   prueba_cancelacion
+OK   prueba_validaciones
+OK   prueba_mesa_unica_y_liberacion
+OK   prueba_qr_y_tarjeta
+OK   prueba_delivery_rechaza_tarjeta
+OK   prueba_pedido_cobrado_inmutable
+OK   prueba_retraso_frontera_y_compensacion
+OK   prueba_reporte_y_top
+OK   prueba_reporte_hojas_y_empates
+OK   prueba_precio_historico
+OK   prueba_colecciones_protegidas
+OK   prueba_json_corrupto_y_ciclo
+OK   prueba_ids_duplicados_y_pago_reutilizado
+OK   prueba_abstractas
+OK   prueba_importe_fuera_de_precision
+OK   prueba_polimorfismo_sin_comprobar_tipos
+OK   prueba_jarra_a_sin_promocion
+OK   prueba_envases_a_solo_platos
+OK   prueba_umbral_a_cercado
+OK   prueba_otras_zonas_a_siempre_cobran
+OK   prueba_minimo_a_40
+OK   prueba_efectivo_a_sin_redondeo_extra
+OK   prueba_a_rechaza_otras_variantes
+OK   prueba_json_a_tres_medios_y_cotizacion
+OK   prueba_delivery_a_retrasado_json
+OK   prueba_combo_a_minimo_sin_maximo_c
+
+Resultado: 31/31 casos aprobados.
+
+OK consola: inicio directo en A, pedido, 2 combos, QR, preparación, entrega, reporte y guardado. Total Bs 88,80.
+OK carga JSON: conserva importe y estado.
+OK selección inválida: --variante B se rechaza.
+Las consultas y firmas pendientes siguen indicadas; esta verificación no acredita actuaciones personales del estudiante.

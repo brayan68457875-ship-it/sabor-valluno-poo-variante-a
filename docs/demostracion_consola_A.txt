@@ -1,0 +1,191 @@
+
+SABOR VALLUNO | Sistema de consola | Simulación académica
+Estudiante: Brayan Saravia Garay | Variante asignada: A
+Hay decisiones propuestas pendientes de consulta. Revise docs/acta_consultas.md y configuracion.json.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: Cliente de demostración
+ID de cliente: Modalidad: 1 Local, 2 Llevar, 3 Delivery: Zona (Cercado/Quillacollo/Sacaba/Vinto): Dirección de entrega: Pedido #1 creado. Agregue productos con la opción 6.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: delivery | Cliente de demostración | REGISTRADO
+ID del pedido: 1 Agregar producto | 2 Quitar producto: 1: Silpancho | Bs 35.00
+2: Pique macho | Bs 45.00
+3: Chicharrón | Bs 40.00
+4: Sopa de maní | Bs 15.00
+5: Mocochinchi vaso | Bs 6.00
+6: Mocochinchi jarra | Bs 18.00
+7: Gaseosa vaso | Bs 5.00
+8: Combo silpancho y mocochinchi | Bs 36.90
+9: Combo anidado familiar | Bs 73.71
+ID del producto: Cantidad (1–20): SABOR VALLUNO | Pedido #1 | delivery
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 17:26
+Estado: REGISTRADO | Variante: A
+2 x Combo silpancho y mocochinchi @ Bs 36.90 | promoción -0.00 | Bs 73.80
+Subtotal: Bs 73.80
+Descuento del pedido: Bs 0.00
+Cargos: Bs 15.00
+Total: Bs 88.80
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+Compensación por retraso: Bs 0.00
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: delivery | Cliente de demostración | REGISTRADO
+ID del pedido: SABOR VALLUNO | Pedido #1 | delivery
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 17:26
+Estado: REGISTRADO | Variante: A
+2 x Combo silpancho y mocochinchi @ Bs 36.90 | promoción -0.00 | Bs 73.80
+Subtotal: Bs 73.80
+Descuento del pedido: Bs 0.00
+Cargos: Bs 15.00
+Total: Bs 88.80
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+Compensación por retraso: Bs 0.00
+Pago: 1 Efectivo, 2 QR, 3 Tarjeta: Código de transacción de 10 dígitos: SABOR VALLUNO | Pedido #1 | delivery
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 17:26
+Estado: REGISTRADO | Variante: A
+2 x Combo silpancho y mocochinchi @ Bs 36.90 | promoción -0.00 | Bs 73.80
+Subtotal: Bs 73.80
+Descuento del pedido: Bs 0.00
+Cargos: Bs 15.00
+Total: Bs 88.80
+QR | pago #1 | cobrado Bs 88.80 | transacción 0000000001
+Ajuste de cobro: Bs 0.00
+Compensación por retraso: Bs 0.00
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: delivery | Cliente de demostración | REGISTRADO
+ID del pedido: Siguientes estados: EN_PREPARACION, CANCELADO
+Nuevo estado: SABOR VALLUNO | Pedido #1 | delivery
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 17:26
+Estado: EN_PREPARACION | Variante: A
+2 x Combo silpancho y mocochinchi @ Bs 36.90 | promoción -0.00 | Bs 73.80
+Subtotal: Bs 73.80
+Descuento del pedido: Bs 0.00
+Cargos: Bs 15.00
+Total: Bs 88.80
+QR | pago #1 | cobrado Bs 88.80 | transacción 0000000001
+Ajuste de cobro: Bs 0.00
+Compensación por retraso: Bs 0.00
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: delivery | Cliente de demostración | EN_PREPARACION
+ID del pedido: Siguientes estados: LISTO
+Nuevo estado: SABOR VALLUNO | Pedido #1 | delivery
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 17:26
+Estado: LISTO | Variante: A
+2 x Combo silpancho y mocochinchi @ Bs 36.90 | promoción -0.00 | Bs 73.80
+Subtotal: Bs 73.80
+Descuento del pedido: Bs 0.00
+Cargos: Bs 15.00
+Total: Bs 88.80
+QR | pago #1 | cobrado Bs 88.80 | transacción 0000000001
+Ajuste de cobro: Bs 0.00
+Compensación por retraso: Bs 0.00
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: delivery | Cliente de demostración | LISTO
+ID del pedido: Siguientes estados: ENTREGADO
+Nuevo estado: SABOR VALLUNO | Pedido #1 | delivery
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 17:26
+Estado: ENTREGADO | Variante: A
+2 x Combo silpancho y mocochinchi @ Bs 36.90 | promoción -0.00 | Bs 73.80
+Subtotal: Bs 73.80
+Descuento del pedido: Bs 0.00
+Cargos: Bs 15.00
+Total: Bs 88.80
+QR | pago #1 | cobrado Bs 88.80 | transacción 0000000001
+Ajuste de cobro: Bs 0.00
+Compensación por retraso: Bs 0.00
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Fecha AAAA-MM-DD (vacío = hoy): {
+  "fecha": "2026-11-23",
+  "por_modalidad": {
+    "local": {
+      "pedidos": 0,
+      "total_pedidos": "0.00",
+      "cobrado": "0.00",
+      "compensacion": "0.00"
+    },
+    "llevar": {
+      "pedidos": 0,
+      "total_pedidos": "0.00",
+      "cobrado": "0.00",
+      "compensacion": "0.00"
+    },
+    "delivery": {
+      "pedidos": 1,
+      "total_pedidos": "88.80",
+      "cobrado": "88.80",
+      "compensacion": "0.00"
+    }
+  },
+  "top_3": [
+    {
+      "id_producto": 8,
+      "nombre": "Combo silpancho y mocochinchi",
+      "cantidad": 2
+    }
+  ],
+  "criterio_top": "lineas",
+  "cobrado_total": "88.80",
+  "compensacion_total": "0.00"
+}
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Ruta JSON (vacío = datos/restaurante.json): Guardado en C:\Users\HP\Documents\Codex\2026-11-19\que\outputs\Sabor_Valluno_Variante_A\datos\ejemplo_A.json
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Fin. Use Guardar JSON antes de salir si desea conservar los datos.
