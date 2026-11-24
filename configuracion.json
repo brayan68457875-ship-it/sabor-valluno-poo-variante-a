@@ -1,0 +1,21 @@
+{
+  "estudiante": {
+    "nombre_completo": "Brayan Saravia Garay",
+    "apellido_para_archivos": "saravia",
+    "institucion": "PENDIENTE",
+    "carrera": "Ingeniería de Sistemas",
+    "asignatura": "Programación Orientada a Objetos",
+    "curso_o_paralelo": "B",
+    "docente": "Ing. Roy Carrasco",
+    "fecha_entrega": "2026-11-24",
+    "variante_asignada": "A",
+    "url_repositorio": "PENDIENTE"
+  },
+  "decisiones_modelado": {
+    "conteo_productos_c": "hojas",
+    "promo_dentro_combos": false,
+    "top_productos": "lineas",
+    "consultas_confirmadas": false
+  },
+  "nota": "Entrega exclusiva de la variante A, confirmada por el estudiante el 23/11/2026. El conteo de envases usa platos recursivos; las claves heredadas de B/C no activan esas variantes. Criterio top 3 y consultas docentes pendientes."
+}
