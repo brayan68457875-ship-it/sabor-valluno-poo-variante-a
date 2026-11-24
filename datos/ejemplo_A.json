@@ -4,8 +4,6 @@
   "reglas": {
     "codigo": "A",
     "decisiones": {
-      "conteo_productos_c": "hojas",
-      "promo_dentro_combos": false,
       "top_productos": "lineas"
     }
   },

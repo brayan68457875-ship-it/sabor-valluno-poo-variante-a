@@ -135,19 +135,10 @@ class Combo(Producto):
         return sum(p.contar_platos() for p in self._componentes)
 
     def contar_productos(self) -> int:
-        conteos = {'hojas': sum(p.contar_productos() for p in self._componentes),
-                   'componentes': len(self._componentes), 'unidad': 1}
-        return conteos[self.reglas.decisiones['conteo_productos_c']]
+        return sum(p.contar_productos() for p in self._componentes)
 
     def calcular_importe(self, cantidad: int, dia: str) -> Decimal:
-        entero(cantidad, 1, 20)
-        normalizar_dia(dia)
-        if not self.reglas.decisiones['promo_dentro_combos']:
-            return super().calcular_importe(cantidad, dia)
-        suma = sum((p.calcular_importe(cantidad, dia) for p in self._componentes), dinero(0))
-        importe = dinero(self.reglas.descontar_combo(suma / cantidad, len(self._componentes)) * cantidad)
-        self.validar_precio(importe)
-        return importe
+        return super().calcular_importe(cantidad, dia)
 
     def contiene(self, p: Producto) -> bool:
         return self is p or any(componente.contiene(p) for componente in self._componentes)

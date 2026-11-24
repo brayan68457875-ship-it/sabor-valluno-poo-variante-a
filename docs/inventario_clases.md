@@ -4,7 +4,7 @@ Este inventario se extrae de las definiciones reales. Complementa el diagrama, q
 
 ## Cambios finales respecto al diagrama proporcionado
 
-Se añadieron al dibujo el cobro centralizado y JSON en Restaurante, el diccionario de decisiones de reporte en ReglasVariante, la tarifa como argumento de calcular_envio, los contratos de conteo y compatibilidad necesarios, el cálculo por cantidad de Combo y la cotización histórica de DetalleProducto. La fecha de un pago admite None antes de procesarlo. No se sustituyó ninguna de las tres jerarquías.
+Se añadieron al dibujo el cobro centralizado y JSON en Restaurante, el diccionario de decisiones del reporte en ReglasVariante, la tarifa como argumento de calcular_envio, los contratos de conteo y compatibilidad necesarios, el cálculo por cantidad de Combo y la cotización histórica de DetalleProducto. La fecha de un pago admite None antes de procesarlo. No se sustituyó ninguna de las tres jerarquías.
 
 La implementación agrega auxiliares de persistencia y validación, sin introducir nuevas clases de negocio. El diagrama original entregado antes de programar se conserva como diagrama_base_proporcionado.png.
 
@@ -333,7 +333,7 @@ Archivo: `modelo/pedidos.py`. Base: Enum.
 
 Archivo: `modelo/reglas.py`. Base: object.
 
-**Campos asignados por esta clase** (incluye inicialización de campos heredados): `_base_envase`, `_codigo`, `_costo_envase`, `_decisiones`, `_descuento_fijo`, `_descuento_local`, `_dias_venta`, `_maximo_componentes`, `_minimo_componentes_descuento`, `_minimo_delivery`, `_minimo_platos_local`, `_paso_redondeo_efectivo`, `_porcentaje_combo`, `_promo_natural_martes`, `_umbral_envio_gratis`, `_zonas_gratis`.
+**Campos asignados por esta clase** (incluye inicialización de campos heredados): `_base_envase`, `_codigo`, `_costo_envase`, `_decisiones`, `_dias_venta`, `_maximo_componentes`, `_minimo_componentes_descuento`, `_minimo_delivery`, `_porcentaje_combo`, `_umbral_envio_gratis`, `_zonas_gratis`.
 
 | Miembro declarado | Contrato |
 |---|---|
@@ -354,6 +354,6 @@ Archivo: `modelo/reglas.py`. Base: object.
 | `a_dict(self)` | público |
 
 
-## Ajuste del alcance del 23/11/2026
+## Correspondencia con el diagrama actual · 24/11/2026
 
-Se retiraron los métodos de retraso y compensación y el campo limite_retraso_min. Delivery conserva fecha_entrega y registrar_entrega(). La estructura de tres jerarquías y nueve subclases se mantiene.
+ReglasVariante contiene solo los atributos activos de A: 10 % de descuento, mínimo dos componentes sin máximo adicional, envase Bs 2 por plato, mínimo delivery Bs 40 y envío gratis solo en Cercado desde Bs 150. Se retiraron campos de otras variantes. Los métodos de compatibilidad mantienen cero descuento local, pago en efectivo sin ajuste y bebidas sin promoción 2×1. Se ignoran las opciones B/C de los JSON anteriores y se conserva el conteo recursivo de platos.

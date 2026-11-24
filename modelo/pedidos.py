@@ -293,7 +293,7 @@ class Llevar(Pedido):
         return self.calcular_envases()
 
     def calcular_envases(self) -> int:
-        return {'platos': self.contar_platos(), 'productos': self.contar_productos()}[self.reglas.base_envase]
+        return self.contar_platos()
 
     def calcular_cargos(self) -> Decimal:
         return self.reglas.calcular_envases(self.contar_platos(), self.contar_productos())

@@ -12,8 +12,6 @@
     "url_repositorio": null
   },
   "decisiones_modelado": {
-    "conteo_productos_c": "hojas",
-    "promo_dentro_combos": false,
     "top_productos": "lineas"
   },
   "nota": "Variante A. Por indicación del estudiante del 23/11/2026 se excluye la gestión de retrasos y compensaciones. El top 3 cuenta cantidades por producto vendido como línea. No se atribuye esta decisión al docente. Repositorio actualmente local."

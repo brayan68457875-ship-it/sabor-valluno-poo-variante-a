@@ -351,5 +351,37 @@ def prueba_combo_a_minimo_sin_maximo_c():
     for _ in range(4):
         combo.agregar_componente(plato)
     assert len(combo.componentes) == 6
+def prueba_configuracion_antigua_no_activa_reglas_ajenas():
+    decisiones = {'conteo_productos_c': 'unidad', 'promo_dentro_combos': True}
+    reglas, plato, bebida, combo = productos('A', decisiones)
+    assert combo.contar_productos() == 2
+    assert combo.calcular_importe(2, 'martes') == dinero('73.80')
+    pedido = Llevar(1, CLIENTE, reglas, MARTES)
+    pedido.agregar_producto(combo, 2)
+    assert pedido.calcular_envases() == 2
+    assert pedido.calcular_total() == dinero('77.80')
+    assert set(reglas.decisiones) == {'top_productos'}
+
+
+def prueba_json_legacy_conserva_cobro_variante_a():
+    with tempfile.TemporaryDirectory() as carpeta:
+        restaurante = Restaurante()
+        cargar_demostracion(restaurante)
+        pedido = Llevar(1, restaurante.clientes[1], restaurante.reglas, LUNES)
+        pedido.agregar_producto(restaurante.productos[8], 2)
+        restaurante.crear_pedido(pedido)
+        restaurante.cobrar_pedido(1, Efectivo(1, 100, restaurante.reglas))
+        ruta = Path(carpeta) / 'anterior.json'
+        restaurante.guardar_json(ruta)
+        datos = json.loads(ruta.read_text(encoding='utf-8'))
+        datos['reglas']['decisiones'].update({'conteo_productos_c': 'unidad', 'promo_dentro_combos': True})
+        ruta.write_text(json.dumps(datos), encoding='utf-8')
+        nuevo = Restaurante.cargar_json(ruta)
+        assert nuevo.pedidos[1].calcular_total() == dinero('77.80')
+        assert nuevo.pedidos[1].pago.monto_cobrado == dinero('77.80')
+        assert nuevo.pedidos[1].pago.cambio == dinero('22.20')
+        assert set(nuevo.reglas.decisiones) == {'top_productos'}
+
+
 if __name__ == '__main__':
     ejecutar()

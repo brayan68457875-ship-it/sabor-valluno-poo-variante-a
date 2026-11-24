@@ -1,12 +1,12 @@
 # Revisión de cumplimiento del proyecto
 
-Fecha: 23/11/2026 · Brayan Saravia Garay  
+Fecha: 24/11/2026 · Brayan Saravia Garay  
 Universidad Adventista de Bolivia · Ingeniería de Sistemas · POO B  
 Docente: Ing. Roy Carrasco · Entrega: 24/11/2026 · Variante A
 
 ## Resultado técnico
 
-Se volvió a leer el DOCX original y se contrastó con la carpeta actual del proyecto. El sistema utiliza consola, biblioteca estándar y las tres jerarquías del diagrama. Las 30 pruebas del alcance actual aprobaron. Además se ejecutó el menú real de principio a fin con registro de productos, combo y cliente, las tres modalidades de pedido, los tres medios de pago, cambios de estado, cancelación, reporte y JSON.
+Se volvió a leer el DOCX original y se contrastó con la carpeta actual del proyecto. El sistema utiliza consola, biblioteca estándar y las tres jerarquías del diagrama. Las 32 pruebas del alcance actual aprobaron. Además se ejecutó el menú real de principio a fin con registro de productos, combo y cliente, las tres modalidades de pedido, los tres medios de pago, cambios de estado, cancelación, reporte y JSON.
 
 | Área | Verificación |
 |---|---|
@@ -17,7 +17,7 @@ Se volvió a leer el DOCX original y se contrastó con la carpeta actual del pro
 | Pagos | Efectivo y cambio; QR de 10 dígitos; tarjeta con 3 %, excluida de delivery |
 | POO | Tres abstractas, nueve subclases con super, propiedades y polimorfismo sin comprobar clases en los cálculos |
 | Reporte | Ventas cobradas por modalidad y top 3 por cantidades de productos vendidos como línea |
-| Pruebas | 30/30 aprobadas; referencia Bs 88,80 y combo anidado incluidos |
+| Pruebas | 32/32 aprobadas; referencia Bs 88,80 y combo anidado incluidos |
 | JSON opcional | Guardado y carga comprobados, conservando cotizaciones y pagos |
 | Documentos | Diagramas v1/v2, tabla de clases, README, manual, inventario, bitácora y registro de alcance |
 
@@ -36,3 +36,7 @@ El repositorio tiene ocho commits iniciales de incorporación, hechos en una mis
 GitHub todavía no tiene un remoto configurado en esta carpeta. La publicación y su URL son el siguiente paso técnico si se quiere satisfacer la entrega por GitHub. La institución ya quedó registrada.
 
 El archivo v1 es la fotografía aportada: no acredita firma docente. La firma y la defensa individual requieren actuaciones personales. El registro de IA tiene un alcance acotado tras las ediciones solicitadas anteriormente; el estudiante debe comprobar que su declaración personal sea fiel a los usos que efectivamente realizó. Esta revisión no firma ni certifica comprensión por él.
+
+## Corrección en VS Code del 24/11/2026
+
+Se alineó el código con los campos activos del último diagrama. Se retiraron opciones C/B y campos inactivos de descuentos y redondeo de otras variantes. La configuración contiene solo el criterio de reporte; los archivos antiguos siguen cargando. Las 32 pruebas y la venta de referencia desde consola fueron comprobadas. No se cambió el alcance sin gestión de retrasos ni compensaciones.
