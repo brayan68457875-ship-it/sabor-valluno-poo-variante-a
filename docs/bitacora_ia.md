@@ -68,3 +68,7 @@ Herramienta: Codex de OpenAI. Tipo: documentación, comprobaciones y publicació
 Consulta textual: «QUIERO QUE COMPLETES CON LAS COSAS QUE FALTAN  SUBE EL REPOSITORIO A GITHUB ,Y HAZ PASAR TOSO A DETALLE ALLA ,».
 
 El estudiante eligió expresamente visibilidad pública. Se preparó el README con las reglas A, instrucciones, diagrama y enlaces a los documentos; se añadió un flujo de pruebas de GitHub Actions. El estado remoto y su URL se verifican al finalizar la publicación. No se modifican firmas ni declaraciones de comprensión personal del estudiante.
+
+## Publicación comprobada · 24/11/2026
+
+Se comprobó el envío inicial del repositorio público [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a) y la correspondencia de main con origin/main. Se incorporó la URL en los datos de entrega y los documentos. El flujo de Actions ejecuta pruebas en Python 3.11 y 3.12; sus resultados se consultan en GitHub y no se confunden con el resultado local.

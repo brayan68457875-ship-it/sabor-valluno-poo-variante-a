@@ -9,10 +9,10 @@
     "docente": "Ing. Roy Carrasco",
     "fecha_entrega": "2026-11-24",
     "variante_asignada": "A",
-    "url_repositorio": null
+    "url_repositorio": "https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a"
   },
   "decisiones_modelado": {
     "top_productos": "lineas"
   },
-  "nota": "Variante A. Por indicación del estudiante del 23/11/2026 se excluye la gestión de retrasos y compensaciones. El top 3 cuenta cantidades por producto vendido como línea. No se atribuye esta decisión al docente. Repositorio actualmente local."
+  "nota": "Variante A. Por indicación del estudiante del 23/11/2026 se excluye la gestión de retrasos y compensaciones. El top 3 cuenta cantidades por producto vendido como línea. No se atribuye esta decisión al docente. Repositorio publicado en GitHub con visibilidad pública."
 }

@@ -1,5 +1,9 @@
 # Sabor Valluno · Sistema de pedidos · Variante A
 
+[![Pruebas del sistema](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a/actions/workflows/pruebas.yml/badge.svg)](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a/actions/workflows/pruebas.yml)
+
+**Repositorio público:** [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a)
+
 Proyecto académico de **Programación Orientada a Objetos**, desarrollado en Python para administrar los pedidos de un restaurante de comida típica de Cochabamba.
 
 | Dato | Información |
@@ -16,7 +20,12 @@ Proyecto académico de **Programación Orientada a Objetos**, desarrollado en Py
 
 ## Ejecutar el sistema
 
-Descarga la carpeta desde **Code → Download ZIP**, extrae los archivos y abre la carpeta que contiene `main.py` en VS Code. También puedes clonar el repositorio copiando su URL desde **Code**.
+Descarga la carpeta desde **Code → Download ZIP**, extrae los archivos y abre la carpeta que contiene `main.py` en VS Code. También puedes clonarlo:
+
+```console
+git clone https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a.git
+cd sabor-valluno-poo-variante-a
+```
 
 Abre una terminal dentro de esa carpeta:
 

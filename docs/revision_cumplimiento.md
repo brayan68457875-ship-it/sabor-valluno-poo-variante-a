@@ -33,7 +33,7 @@ La guía original sí incluía retrasos y una consulta al docente; por eso esta 
 
 El repositorio tiene ocho commits iniciales de incorporación, hechos en una misma sesión. Las correcciones actuales constituyen trabajo posterior y se conservan como cambios reales. Ese historial no acredita cuatro commits en la semana 2 y cuatro en la semana 3, que es la distribución indicada por la guía.
 
-GitHub todavía no tiene un remoto configurado en esta carpeta. La publicación y su URL son el siguiente paso técnico si se quiere satisfacer la entrega por GitHub. La institución ya quedó registrada.
+El repositorio se publicó el 24/11/2026 en [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a), con visibilidad pública. El remoto origin está configurado y las comprobaciones automáticas se encuentran en Actions. La institución ya está registrada.
 
 El archivo v1 es la fotografía aportada: no acredita firma docente. La firma y la defensa individual requieren actuaciones personales. El registro de IA tiene un alcance acotado tras las ediciones solicitadas anteriormente; el estudiante debe comprobar que su declaración personal sea fiel a los usos que efectivamente realizó. Esta revisión no firma ni certifica comprensión por él.
 

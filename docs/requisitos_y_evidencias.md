@@ -26,7 +26,7 @@
 | Bitácora de IA | bitacora_ia.md | Registro centrado en generación/adaptación; verificar completitud de todos los usos según la guía |
 | Registro por estudiante | registro_ia_saravia.md | Aceptación, cambios personales y comprensión deben corresponder a la revisión real; declaración sin firma |
 | Acta de consultas | acta_consultas.md | Alcance registrado; no se inventan respuestas docentes |
-| Git y GitHub | .gitignore y git_y_entrega.md | Ocho bloques de importación local en esta sesión; sin remoto GitHub; no acredita fases de semanas anteriores |
+| Git y GitHub | .gitignore y git_y_entrega.md | Repositorio público [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a), historial y Actions; el historial no acredita fases de semanas anteriores |
 | Commits en semanas anteriores | Evidencia que debe aportar el estudiante | No se fabrica |
 | Defensa individual sin IA | defensa.md | Preparación incluida; ejecución corresponde al estudiante |
 

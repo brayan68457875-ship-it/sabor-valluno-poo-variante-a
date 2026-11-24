@@ -1,4 +1,6 @@
 <!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sabor Valluno · Variante A · Brayan Saravia Garay</title><style>body{font:17px/1.65 Arial,sans-serif;color:#203248;background:#edf2f7;margin:0}main{max-width:1150px;margin:auto;background:white;padding:44px 58px}h1{font-size:34px;color:#17466e}h2{margin-top:36px;color:#17466e}nav{position:sticky;top:0;background:#173e60;padding:12px;display:flex;flex-wrap:wrap;gap:20px}nav a{color:white;text-decoration:none}section{padding-top:25px;border-bottom:2px solid #e5ecf2;padding-bottom:35px}code{font-size:.9em;background:#eff3f7;padding:2px 5px}pre{overflow:auto;padding:20px;background:#eff3f7}pre code{padding:0}.tabla{overflow:auto}table{border-collapse:collapse;width:100%;font-size:15px}td{border:1px solid #d5dfe8;padding:10px}tr:first-child{font-weight:bold;background:#eaf1f7}blockquote{border-left:4px solid #86a5bf;padding:10px 20px;background:#f4f7fa}.punto{margin-left:15px}.aviso{padding:20px;background:#fff5db;border:1px solid #dec17d}img{max-width:100%;height:auto}@media print{body{background:white}main{padding:0;max-width:none}nav{display:none}h1,h2{break-after:avoid}tr{break-inside:avoid}section{border:0}a{color:inherit}}</style><nav><a href="#s0">Inicio</a><a href="#s1">Datos</a><a href="#s2">Manual</a><a href="#s3">Requisitos</a><a href="#s4">Alcance</a><a href="#s5">IA</a><a href="#s6">Registro personal</a><a href="#s7">Defensa</a><a href="#s8">Git</a><a href="#s9">Revisión actual</a></nav><main><p class="aviso"><strong>Universidad Adventista de Bolivia · Variante A.</strong> Brayan Saravia Garay · Ing. Roy Carrasco · POO B · 24/11/2026. Alcance actualizado por indicación del estudiante: sin gestión de retrasos ni compensaciones.</p><section id="s0"><h1>Sabor Valluno · Sistema de pedidos · Variante A</h1>
+<p>[![Pruebas del sistema](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a/actions/workflows/pruebas.yml/badge.svg)](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a/actions/workflows/pruebas.yml)</p>
+<p><strong>Repositorio público:</strong> [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a)</p>
 <p>Proyecto académico de <strong>Programación Orientada a Objetos</strong>, desarrollado en Python para administrar los pedidos de un restaurante de comida típica de Cochabamba.</p>
 <div class="tabla"><table>
 <tr><td>Dato</td><td>Información</td></tr>
@@ -13,7 +15,13 @@
 <tr><td>Tecnología</td><td>Python 3.10 o posterior; biblioteca estándar</td></tr>
 </table></div>
 <h2>Ejecutar el sistema</h2>
-<p>Descarga la carpeta desde <strong>Code → Download ZIP</strong>, extrae los archivos y abre la carpeta que contiene <code>main.py</code> en VS Code. También puedes clonar el repositorio copiando su URL desde <strong>Code</strong>.</p>
+<p>Descarga la carpeta desde <strong>Code → Download ZIP</strong>, extrae los archivos y abre la carpeta que contiene <code>main.py</code> en VS Code. También puedes clonarlo:</p>
+<pre><code>
+git clone https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a.git
+
+cd sabor-valluno-poo-variante-a
+
+</code></pre>
 <p>Abre una terminal dentro de esa carpeta:</p>
 <pre><code>
 python main.py --demo
@@ -166,10 +174,10 @@ git push
 <tr><td>Docente</td><td>Ing. Roy Carrasco</td></tr>
 <tr><td>Entrega</td><td>24/11/2026</td></tr>
 <tr><td>Variante</td><td>A</td></tr>
-<tr><td>Repositorio</td><td>Local, sin remoto de GitHub configurado</td></tr>
+<tr><td>Repositorio</td><td>Público: [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a)</td></tr>
 </table></div>
 <p>La gestión de retrasos y compensaciones se excluye por indicación del estudiante del 23/11/2026. Se mantienen fechas de entrega, validación de estados y reporte top 3 por cantidades de productos vendidos como líneas. El acta registra el cambio de alcance, sin atribuir una respuesta al docente.</p>
-<p>La firma, comprensión personal, defensa y evidencia del trabajo de fases anteriores no se generan automáticamente. El registro personal debe describir la revisión real del estudiante. El proyecto no se ha publicado en GitHub; cuando se publique, se incorporará su URL en configuracion.json y README.</p></section><section id="s2"><h1>Manual del proyecto Sabor Valluno</h1>
+<p>La firma, comprensión personal, defensa y evidencia del trabajo de fases anteriores no se generan automáticamente. El registro personal debe describir la revisión real del estudiante. El proyecto está publicado en GitHub; su URL está incorporada en configuracion.json y README.</p></section><section id="s2"><h1>Manual del proyecto Sabor Valluno</h1>
 <p>Brayan Saravia Garay · Ingeniería de Sistemas · Paralelo B   Ing. Roy Carrasco · Entrega 24 de noviembre de 2026</p>
 <h2>Problema y resultado esperado</h2>
 <p>Sabor Valluno registra pedidos de comida típica y necesita calcular correctamente combos, envases, envíos y cobros. Una suma manual puede olvidar que un combo contiene otros productos o que un envío cambia según la zona. El programa reúne esas reglas en objetos y permite atender un pedido completo desde su registro hasta su entrega.</p>
@@ -280,7 +288,7 @@ importe cobrado = total + comisión de tarjeta si corresponde (efectivo y QR: si
 <tr><td>Bitácora de IA</td><td>bitacora_ia.md</td><td>Registro centrado en generación/adaptación; verificar completitud de todos los usos según la guía</td></tr>
 <tr><td>Registro por estudiante</td><td>registro_ia_saravia.md</td><td>Aceptación, cambios personales y comprensión deben corresponder a la revisión real; declaración sin firma</td></tr>
 <tr><td>Acta de consultas</td><td>acta_consultas.md</td><td>Alcance registrado; no se inventan respuestas docentes</td></tr>
-<tr><td>Git y GitHub</td><td>.gitignore y git_y_entrega.md</td><td>Ocho bloques de importación local en esta sesión; sin remoto GitHub; no acredita fases de semanas anteriores</td></tr>
+<tr><td>Git y GitHub</td><td>.gitignore y git_y_entrega.md</td><td>Repositorio público [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a), historial y Actions; el historial no acredita fases de semanas anteriores</td></tr>
 <tr><td>Commits en semanas anteriores</td><td>Evidencia que debe aportar el estudiante</td><td>No se fabrica</td></tr>
 <tr><td>Defensa individual sin IA</td><td>defensa.md</td><td>Preparación incluida; ejecución corresponde al estudiante</td></tr>
 </table></div>
@@ -319,7 +327,9 @@ importe cobrado = total + comisión de tarjeta si corresponde (efectivo y QR: si
 <h2>Preparación de la publicación en GitHub · 24/11/2026</h2>
 <p>Herramienta: Codex de OpenAI. Tipo: documentación, comprobaciones y publicación solicitada por el estudiante.</p>
 <p>Consulta textual: «QUIERO QUE COMPLETES CON LAS COSAS QUE FALTAN  SUBE EL REPOSITORIO A GITHUB ,Y HAZ PASAR TOSO A DETALLE ALLA ,».</p>
-<p>El estudiante eligió expresamente visibilidad pública. Se preparó el README con las reglas A, instrucciones, diagrama y enlaces a los documentos; se añadió un flujo de pruebas de GitHub Actions. El estado remoto y su URL se verifican al finalizar la publicación. No se modifican firmas ni declaraciones de comprensión personal del estudiante.</p></section><section id="s6"><h1>Registro personal de uso de IA</h1>
+<p>El estudiante eligió expresamente visibilidad pública. Se preparó el README con las reglas A, instrucciones, diagrama y enlaces a los documentos; se añadió un flujo de pruebas de GitHub Actions. El estado remoto y su URL se verifican al finalizar la publicación. No se modifican firmas ni declaraciones de comprensión personal del estudiante.</p>
+<h2>Publicación comprobada · 24/11/2026</h2>
+<p>Se comprobó el envío inicial del repositorio público [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a) y la correspondencia de main con origin/main. Se incorporó la URL en los datos de entrega y los documentos. El flujo de Actions ejecuta pruebas en Python 3.11 y 3.12; sus resultados se consultan en GitHub y no se confunden con el resultado local.</p></section><section id="s6"><h1>Registro personal de uso de IA</h1>
 <p>Estudiante: Brayan Saravia Garay   Variante asignada: A, informada por Brayan el 23/11/2026   Paralelo: B   Fase actual: integración y revisión; no acredita fases anteriores   Docente: Ing. Roy Carrasco</p>
 <p>Este registro se centra en la generación del proyecto y su adaptación a la variante A. Las valoraciones de comprensión y las decisiones de aceptación corresponden a Brayan.</p>
 <div class="tabla"><table>
@@ -352,7 +362,9 @@ importe cobrado = total + comisión de tarjeta si corresponde (efectivo y QR: si
 <h2>Preparación de la publicación en GitHub · 24/11/2026</h2>
 <p>Herramienta: Codex de OpenAI. Tipo: documentación, comprobaciones y publicación solicitada por el estudiante.</p>
 <p>Consulta textual: «QUIERO QUE COMPLETES CON LAS COSAS QUE FALTAN  SUBE EL REPOSITORIO A GITHUB ,Y HAZ PASAR TOSO A DETALLE ALLA ,».</p>
-<p>El estudiante eligió expresamente visibilidad pública. Se preparó el README con las reglas A, instrucciones, diagrama y enlaces a los documentos; se añadió un flujo de pruebas de GitHub Actions. El estado remoto y su URL se verifican al finalizar la publicación. No se modifican firmas ni declaraciones de comprensión personal del estudiante.</p></section><section id="s7"><h1>Preparación para la defensa individual</h1>
+<p>El estudiante eligió expresamente visibilidad pública. Se preparó el README con las reglas A, instrucciones, diagrama y enlaces a los documentos; se añadió un flujo de pruebas de GitHub Actions. El estado remoto y su URL se verifican al finalizar la publicación. No se modifican firmas ni declaraciones de comprensión personal del estudiante.</p>
+<h2>Publicación comprobada · 24/11/2026</h2>
+<p>Se comprobó el envío inicial del repositorio público [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a) y la correspondencia de main con origin/main. Se incorporó la URL en los datos de entrega y los documentos. El flujo de Actions ejecuta pruebas en Python 3.11 y 3.12; sus resultados se consultan en GitHub y no se confunden con el resultado local.</p></section><section id="s7"><h1>Preparación para la defensa individual</h1>
 <p>Brayan Saravia Garay · POO · Paralelo B · Ing. Roy Carrasco</p>
 <h2>Explicar el diagrama en dos minutos</h2>
 <p>Describir primero el recorrido: Restaurante registra un Cliente; el cliente tiene un Pedido; el pedido compone DetalleProducto; cada detalle referencia un Producto. Después mostrar las tres jerarquías y explicar por qué Producto, Pedido y MetodoPago son abstractas. Cerrar con Combo agregando Producto para admitir anidamientos y con ReglasVariante separando los variante A.</p>
@@ -403,7 +415,7 @@ git log --format=&quot;%h %ai %s&quot;
 
 </code></pre>
 <h2>GitHub</h2>
-<p>Los commits se guardan localmente. No se ha publicado este repositorio en GitHub y falta su URL. Una vez creado el repositorio remoto correcto, el estudiante puede añadirlo y publicarlo siguiendo su flujo de trabajo. No se modificó el proyecto distinto llamado «proyecto algebra».</p>
+<p>El repositorio está publicado con visibilidad pública en [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a). El remoto origin apunta a esa dirección y la rama de trabajo es main. Las modificaciones futuras se envían con git push. No se modificó el proyecto distinto llamado «proyecto algebra».</p>
 <p>La firma, defensa y evidencia del trabajo personal corresponden a actuaciones reales del estudiante. El acta describe el alcance actual. Los cambios futuros deben producir commits que describan cambios efectivos; no se cambian fechas para simular trabajo anterior.</p></section><section id="s9"><h1>Revisión de cumplimiento del proyecto</h1>
 <p>Fecha: 24/11/2026 · Brayan Saravia Garay   Universidad Adventista de Bolivia · Ingeniería de Sistemas · POO B   Docente: Ing. Roy Carrasco · Entrega: 24/11/2026 · Variante A</p>
 <h2>Resultado técnico</h2>
@@ -427,7 +439,7 @@ git log --format=&quot;%h %ai %s&quot;
 <p>La guía original sí incluía retrasos y una consulta al docente; por eso esta revisión distingue ese requisito del alcance actual solicitado. No se presenta como una implementación literal del 100 % de la guía original.</p>
 <h2>Estado de evidencias personales y publicación</h2>
 <p>El repositorio tiene ocho commits iniciales de incorporación, hechos en una misma sesión. Las correcciones actuales constituyen trabajo posterior y se conservan como cambios reales. Ese historial no acredita cuatro commits en la semana 2 y cuatro en la semana 3, que es la distribución indicada por la guía.</p>
-<p>GitHub todavía no tiene un remoto configurado en esta carpeta. La publicación y su URL son el siguiente paso técnico si se quiere satisfacer la entrega por GitHub. La institución ya quedó registrada.</p>
+<p>El repositorio se publicó el 24/11/2026 en [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a), con visibilidad pública. El remoto origin está configurado y las comprobaciones automáticas se encuentran en Actions. La institución ya está registrada.</p>
 <p>El archivo v1 es la fotografía aportada: no acredita firma docente. La firma y la defensa individual requieren actuaciones personales. El registro de IA tiene un alcance acotado tras las ediciones solicitadas anteriormente; el estudiante debe comprobar que su declaración personal sea fiel a los usos que efectivamente realizó. Esta revisión no firma ni certifica comprensión por él.</p>
 <h2>Corrección en VS Code del 24/11/2026</h2>
 <p>Se alineó el código con los campos activos del último diagrama. Se retiraron opciones C/B y campos inactivos de descuentos y redondeo de otras variantes. La configuración contiene solo el criterio de reporte; los archivos antiguos siguen cargando. Las 32 pruebas y la venta de referencia desde consola fueron comprobadas. No se cambió el alcance sin gestión de retrasos ni compensaciones.</p></section><section><h1>Diagrama actual</h1><a href="docs/diagrama_v2.png"><img src="docs/diagrama_v2.png" alt="Diagrama actual variante A"></a><h2>Verificación técnica</h2><pre>VERIFICACIÓN DEL CÓDIGO SEGÚN DIAGRAMA · 24/11/2026

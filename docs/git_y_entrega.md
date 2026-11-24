@@ -35,6 +35,6 @@ git log --format="%h %ai %s"
 
 ## GitHub
 
-Los commits se guardan localmente. No se ha publicado este repositorio en GitHub y falta su URL. Una vez creado el repositorio remoto correcto, el estudiante puede añadirlo y publicarlo siguiendo su flujo de trabajo. No se modificó el proyecto distinto llamado «proyecto algebra».
+El repositorio está publicado con visibilidad pública en [brayan68457875-ship-it/sabor-valluno-poo-variante-a](https://github.com/brayan68457875-ship-it/sabor-valluno-poo-variante-a). El remoto origin apunta a esa dirección y la rama de trabajo es main. Las modificaciones futuras se envían con git push. No se modificó el proyecto distinto llamado «proyecto algebra».
 
 La firma, defensa y evidencia del trabajo personal corresponden a actuaciones reales del estudiante. El acta describe el alcance actual. Los cambios futuros deben producir commits que describan cambios efectivos; no se cambian fechas para simular trabajo anterior.
