@@ -1,101 +1,161 @@
-<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sabor Valluno · Variante A · Brayan Saravia Garay</title><style>body{font:17px/1.65 Arial,sans-serif;color:#203248;background:#edf2f7;margin:0}main{max-width:1150px;margin:auto;background:white;padding:44px 58px}h1{font-size:34px;color:#17466e}h2{margin-top:36px;color:#17466e}nav{position:sticky;top:0;background:#173e60;padding:12px;display:flex;flex-wrap:wrap;gap:20px}nav a{color:white;text-decoration:none}section{padding-top:25px;border-bottom:2px solid #e5ecf2;padding-bottom:35px}code{font-size:.9em;background:#eff3f7;padding:2px 5px}pre{overflow:auto;padding:20px;background:#eff3f7}pre code{padding:0}.tabla{overflow:auto}table{border-collapse:collapse;width:100%;font-size:15px}td{border:1px solid #d5dfe8;padding:10px}tr:first-child{font-weight:bold;background:#eaf1f7}blockquote{border-left:4px solid #86a5bf;padding:10px 20px;background:#f4f7fa}.punto{margin-left:15px}.aviso{padding:20px;background:#fff5db;border:1px solid #dec17d}img{max-width:100%;height:auto}@media print{body{background:white}main{padding:0;max-width:none}nav{display:none}h1,h2{break-after:avoid}tr{break-inside:avoid}section{border:0}a{color:inherit}}</style><nav><a href="#s0">Inicio</a><a href="#s1">Datos</a><a href="#s2">Manual</a><a href="#s3">Requisitos</a><a href="#s4">Alcance</a><a href="#s5">IA</a><a href="#s6">Registro personal</a><a href="#s7">Defensa</a><a href="#s8">Git</a><a href="#s9">Revisión actual</a></nav><main><p class="aviso"><strong>Universidad Adventista de Bolivia · Variante A.</strong> Brayan Saravia Garay · Ing. Roy Carrasco · POO B · 24/11/2026. Alcance actualizado por indicación del estudiante: sin gestión de retrasos ni compensaciones.</p><section id="s0"><h1>Sistema de pedidos Sabor Valluno · Variante A</h1>
-<p><strong>Estudiante:</strong> Brayan Saravia Garay   <strong>Carrera:</strong> Ingeniería de Sistemas   <strong>Asignatura:</strong> Programación Orientada a Objetos   <strong>Variante asignada:</strong> A   <strong>Paralelo:</strong> B   <strong>Docente:</strong> Ing. Roy Carrasco   <strong>Entrega:</strong> 24 de noviembre de 2026   <strong>Institución:</strong> Universidad Adventista de Bolivia.</p>
-<p>Aplicación de consola en Python para registrar productos, clientes, pedidos y pagos del restaurante ficticio Sabor Valluno. Conserva las clases del diagrama entregado y aplica exclusivamente la variante A, confirmada por Brayan el 23/11/2026. El paralelo del estudiante continúa siendo B.</p>
-<h2>Cómo ejecutarlo</h2>
-<p class="punto">1. Extraer el ZIP completo y abrir la carpeta <code>Sabor_Valluno_Variante_A</code> en VS Code.</p>
-<p class="punto">2. Usar Python 3.10 o posterior. No se instala nada con pip: todo utiliza la biblioteca estándar.</p>
-<p class="punto">3. Abrir una terminal dentro de esta carpeta y ejecutar:</p>
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sabor Valluno · Variante A · Brayan Saravia Garay</title><style>body{font:17px/1.65 Arial,sans-serif;color:#203248;background:#edf2f7;margin:0}main{max-width:1150px;margin:auto;background:white;padding:44px 58px}h1{font-size:34px;color:#17466e}h2{margin-top:36px;color:#17466e}nav{position:sticky;top:0;background:#173e60;padding:12px;display:flex;flex-wrap:wrap;gap:20px}nav a{color:white;text-decoration:none}section{padding-top:25px;border-bottom:2px solid #e5ecf2;padding-bottom:35px}code{font-size:.9em;background:#eff3f7;padding:2px 5px}pre{overflow:auto;padding:20px;background:#eff3f7}pre code{padding:0}.tabla{overflow:auto}table{border-collapse:collapse;width:100%;font-size:15px}td{border:1px solid #d5dfe8;padding:10px}tr:first-child{font-weight:bold;background:#eaf1f7}blockquote{border-left:4px solid #86a5bf;padding:10px 20px;background:#f4f7fa}.punto{margin-left:15px}.aviso{padding:20px;background:#fff5db;border:1px solid #dec17d}img{max-width:100%;height:auto}@media print{body{background:white}main{padding:0;max-width:none}nav{display:none}h1,h2{break-after:avoid}tr{break-inside:avoid}section{border:0}a{color:inherit}}</style><nav><a href="#s0">Inicio</a><a href="#s1">Datos</a><a href="#s2">Manual</a><a href="#s3">Requisitos</a><a href="#s4">Alcance</a><a href="#s5">IA</a><a href="#s6">Registro personal</a><a href="#s7">Defensa</a><a href="#s8">Git</a><a href="#s9">Revisión actual</a></nav><main><p class="aviso"><strong>Universidad Adventista de Bolivia · Variante A.</strong> Brayan Saravia Garay · Ing. Roy Carrasco · POO B · 24/11/2026. Alcance actualizado por indicación del estudiante: sin gestión de retrasos ni compensaciones.</p><section id="s0"><h1>Sabor Valluno · Sistema de pedidos · Variante A</h1>
+<p>Proyecto académico de <strong>Programación Orientada a Objetos</strong>, desarrollado en Python para administrar los pedidos de un restaurante de comida típica de Cochabamba.</p>
+<div class="tabla"><table>
+<tr><td>Dato</td><td>Información</td></tr>
+<tr><td>Estudiante</td><td>Brayan Saravia Garay</td></tr>
+<tr><td>Institución</td><td>Universidad Adventista de Bolivia</td></tr>
+<tr><td>Carrera</td><td>Ingeniería de Sistemas</td></tr>
+<tr><td>Asignatura y paralelo</td><td>Programación Orientada a Objetos · B</td></tr>
+<tr><td>Docente</td><td>Ing. Roy Carrasco</td></tr>
+<tr><td>Fecha de entrega</td><td>24 de noviembre de 2026</td></tr>
+<tr><td>Variante asignada</td><td><strong>A</strong></td></tr>
+<tr><td>Tipo de aplicación</td><td><strong>Consola / terminal</strong></td></tr>
+<tr><td>Tecnología</td><td>Python 3.10 o posterior; biblioteca estándar</td></tr>
+</table></div>
+<h2>Ejecutar el sistema</h2>
+<p>Descarga la carpeta desde <strong>Code → Download ZIP</strong>, extrae los archivos y abre la carpeta que contiene <code>main.py</code> en VS Code. También puedes clonar el repositorio copiando su URL desde <strong>Code</strong>.</p>
+<p>Abre una terminal dentro de esa carpeta:</p>
 <pre><code>
-python main.py --variante A --demo
+python main.py --demo
 
 </code></pre>
-<p>En Windows también puede usarse <code>py -3</code> en lugar de <code>python</code>. <code>python main.py</code> inicia directamente con la variante A asignada. <code>--demo</code> carga productos y un cliente ficticios; omitirlo permite empezar sin registros. Esta entrega rechaza variantes distintas de A.</p>
+<p>En Windows puedes sustituir <code>python</code> por <code>py -3</code>. No se requiere instalar paquetes con pip. <code>--demo</code> carga un cliente y un menú ficticios para practicar; omite ese parámetro si quieres comenzar con un restaurante vacío. La variante A se selecciona automáticamente.</p>
+<pre><code>
+python main.py
+
+python main.py --variante A --demo
+
+python main.py --cargar datos/ejemplo_A.json
+
+</code></pre>
+<p>Los pagos son una simulación académica; no se realizan transacciones bancarias ni se emiten facturas fiscales. El programa conserva los datos entre sesiones únicamente si se usa la opción de guardar JSON.</p>
+<h2>Probar el proyecto</h2>
 <pre><code>
 python pruebas.py
 
-python main.py --demo
-
-python main.py --cargar datos/restaurante.json
-
 </code></pre>
-<p>No ejecutar las pruebas con <code>-O</code>, porque ese modo elimina las comprobaciones <code>assert</code>.</p>
-<p>El menú permite registrar productos y combos, consultar el menú por día, registrar clientes, crear las tres modalidades de pedido, agregar/quitar productos, cambiar estados, cobrar, consultar el detalle, generar reportes y guardar/cargar JSON. La opción 15 permite agregar o quitar componentes de un combo. Los datos se conservan entre sesiones únicamente si se guardan en JSON.</p>
-<h2>Primera demostración</h2>
-<p>Con <code>python main.py --variante A --demo</code>, elegir 5 para crear un pedido del cliente 1, modalidad 3, zona Quillacollo y una dirección de ejemplo. Elegir 6, seleccionar el pedido 1, agregar el producto 8, cantidad 2. El comprobante mostrará Bs 73,80 de subtotal, Bs 15 de envío y Bs 88,80 de total. Elegir 9 y pagar con QR de diez dígitos o efectivo suficiente. Para entregarlo, elegir 8 sucesivamente con EN_PREPARACION, LISTO y ENTREGADO.</p>
-<p>La demostración usa los precios 35 y 6 que aparecen en la guía; los otros precios y el cliente son ficticios y están identificados en <code>datos_demo.py</code>.</p>
-<h2>Estructura de la entrega</h2>
-<pre><code>
-Sabor_Valluno_Variante_A/
-
-  main.py                    Menú de consola
-
-  restaurante.py             Registros, mesas, reportes y JSON
-
-  datos_demo.py              Datos ficticios para practicar
-
-  configuracion.json         Datos del estudiante y alcance actual
-
-  pruebas.py                 Casos ejecutables con assert
-
-  modelo/
-
-    clientes.py              Cliente
-
-    productos.py             Producto, Plato, Bebida, Combo
-
-    pedidos.py               Pedido, Local, Llevar, Delivery,
-
-                             DetalleProducto y EstadoPedido
-
-    pagos.py                 MetodoPago, Efectivo, QR, Tarjeta
-
-    reglas.py                ReglasVariante, variante A
-
-    utilidades.py            Importes, fechas y validaciones
-
-  datos/                     Archivos JSON de ejemplo
-
-  docs/
-
-    diagrama_v1.png           Imagen del boceto proporcionado
-
-    diagrama_v2.png           Diagrama enriquecido actualizado
-
-    manual_del_proyecto.md   Explicación de funcionamiento y diseño
-
-    requisitos_y_evidencias.md
-
-    datos_y_pendientes.md
-
-    acta_consultas.md
-
-    bitacora_ia.md
-
-    registro_ia_saravia.md
-
-    defensa.md
-
-    inventario_clases.md
-
-    resultados_pruebas.txt
-
-    git_y_entrega.md
-
-</code></pre>
-<p>La fotografía del boceto se conserva como evidencia aportada por el usuario. No se afirma que esté firmada por el docente: esa verificación y la firma corresponden al estudiante y al docente.</p>
-<h2>Variante A asignada</h2>
+<p>Hay <strong>32 casos con assert</strong>. Verifican el caso de referencia, combos anidados, detección de ciclos, disponibilidad, envases, mínimos de delivery, mesas, estados, pagos, reportes y persistencia JSON. Incluyen la lectura de archivos antiguos sin activar reglas ajenas a A. No ejecutar con <code>-O</code>, porque ese modo elimina los assert.</p>
+<p>La pestaña <strong>Actions</strong> ejecuta las pruebas, la comprobación de sintaxis y el inicio de la consola con Python 3.11 y 3.12 después de cada actualización de <code>main</code> y en solicitudes de cambios. La configuración está en [pruebas.yml](.github/workflows/pruebas.yml). Los resultados locales de la revisión están en [resultados_pruebas.txt](docs/resultados_pruebas.txt); el resultado del servidor se consulta en Actions.</p>
+<h2>Funciones del menú</h2>
 <div class="tabla"><table>
-<tr><td>Perfil</td><td>Combo</td><td>Envase para llevar</td><td>Envío gratis</td><td>Mínimo delivery</td><td>Particularidad</td></tr>
-<tr><td>A</td><td>10 %</td><td>Bs 2 por plato</td><td>Desde Bs 150, Cercado</td><td>Bs 40</td><td>Chicharrón solo domingo</td></tr>
+<tr><td>Opción</td><td>Función</td></tr>
+<tr><td>1</td><td>Registrar platos, bebidas y combos</td></tr>
+<tr><td>2</td><td>Consultar el menú disponible para un día</td></tr>
+<tr><td>3–4</td><td>Registrar y consultar clientes</td></tr>
+<tr><td>5</td><td>Crear pedidos Local, Llevar o Delivery</td></tr>
+<tr><td>6</td><td>Agregar o quitar productos mientras el pedido sea editable</td></tr>
+<tr><td>7</td><td>Mostrar detalle y comprobante</td></tr>
+<tr><td>8</td><td>Cambiar estado o cancelar cuando corresponda</td></tr>
+<tr><td>9</td><td>Cobrar con Efectivo, QR o Tarjeta</td></tr>
+<tr><td>10</td><td>Reporte diario por modalidad y tres productos más vendidos</td></tr>
+<tr><td>11–12</td><td>Guardar o cargar JSON; funcionalidad opcional de la guía</td></tr>
+<tr><td>13</td><td>Cargar los datos de demostración en un restaurante vacío</td></tr>
+<tr><td>15</td><td>Agregar o quitar componentes de un combo</td></tr>
+<tr><td>0</td><td>Salir</td></tr>
 </table></div>
-<p>Las tarifas son Cercado 8, Quillacollo 15, Sacaba 15 y Vinto 20. En A, solo Cercado ofrece envío gratuito desde Bs 150 de subtotal. El mínimo de delivery es Bs 40. La variante queda fija en A.</p>
-<h2>Estado y alcance de la entrega</h2>
-<p>Ya se incorporaron los datos personales que proporcionó Brayan. La institución y la variante A están incorporadas. El repositorio existe localmente y todavía no tiene remoto de GitHub. Ver <code>docs/datos_y_pendientes.md</code> y <code>docs/acta_consultas.md</code>.</p>
-<p>El top 3 cuenta unidades por producto vendido como línea, incluidos los combos como productos. Por indicación del estudiante se retiró la gestión de retrasos y compensaciones. El cambio se registra en docs/acta_consultas.md.</p>
-<p>La gestión de retrasos y compensaciones que aparecía en la guía original se excluye del alcance actual por indicación del estudiante del 23/11/2026.</p>
-<p>Los diagramas y el código se prepararon con ayuda de IA. La bitácora registra la asistencia; la revisión y comprensión son responsabilidad del estudiante. La firma, la defensa, las consultas reales, el historial de trabajo de semanas anteriores y la publicación en GitHub requieren actuaciones reales del estudiante; no se han fabricado.</p>
-<h2>Historial local de esta incorporación</h2>
-<p>Los archivos existentes se incorporan en ocho commits por componentes, todos con las fechas reales de esta sesión. Este historial no acredita semanas de trabajo anteriores. Consultar <code>docs/git_y_entrega.md</code>. El repositorio no se ha publicado en GitHub.</p></section><section id="s1"><h1>Datos y estado de la entrega</h1>
+<h2>Reglas de la variante A</h2>
+<div class="tabla"><table>
+<tr><td>Concepto</td><td>Regla implementada</td></tr>
+<tr><td>Combo</td><td>Dos o más componentes, incluidos otros combos; 10 % de descuento en cada nivel; sin ciclos</td></tr>
+<tr><td>Bebida</td><td>Jarra = tres veces el precio por vaso; sin 2×1</td></tr>
+<tr><td>Disponibilidad</td><td>Chicharrón solo domingo; un combo exige disponibilidad de todos sus componentes</td></tr>
+<tr><td>Local</td><td>Mesa 1–15, sin dos pedidos abiertos en la misma mesa; sin cargos adicionales</td></tr>
+<tr><td>Llevar</td><td>Bs 2 por plato, incluidos los platos dentro de combos; bebidas sin envase</td></tr>
+<tr><td>Delivery</td><td>Subtotal mínimo Bs 40</td></tr>
+<tr><td>Tarifas</td><td>Cercado Bs 8; Quillacollo Bs 15; Sacaba Bs 15; Vinto Bs 20</td></tr>
+<tr><td>Envío gratuito</td><td>Solo Cercado con subtotal desde Bs 150</td></tr>
+<tr><td>Efectivo</td><td>Debe cubrir el total; calcula cambio; sin redondeo extra a Bs 0,50</td></tr>
+<tr><td>QR</td><td>Código de transacción de diez dígitos</td></tr>
+<tr><td>Tarjeta</td><td>Comisión del 3 %; no admitida para delivery</td></tr>
+<tr><td>Validaciones</td><td>Precio positivo; cantidad 1–20; teléfono de ocho dígitos que comienza en 6 o 7</td></tr>
+</table></div>
+<p>Los importes se calculan con <code>Decimal</code> y se redondean a dos decimales. Los precios de los combos ya incluyen el descuento: no se vuelve a restar al cobrar.</p>
+<p>El flujo de estados es <code>REGISTRADO → EN_PREPARACION → LISTO → ENTREGADO</code>. Solo se cancela desde <code>REGISTRADO</code>. Los pedidos cobrados no permiten edición ni cancelación simple para mantener la consistencia de sus importes.</p>
+<h2>Demostración del caso de referencia</h2>
+<p>Un silpancho de Bs 35 y un vaso de mocochinchi de Bs 6 forman un combo:</p>
+<pre><code>
+Un combo:             (35 + 6) × 0,90 = Bs 36,90
+
+Dos combos:               36,90 × 2 = Bs 73,80
+
+Delivery a Quillacollo:              + Bs 15,00
+
+Total:                                Bs 88,80
+
+Efectivo recibido:                    Bs 100,00
+
+Cambio:                               Bs 11,20
+
+</code></pre>
+<p>Con los datos demo, crea un delivery del cliente 1 a Quillacollo y agrega dos unidades del producto 8. Elige efectivo o un QR de diez dígitos. Los precios 35 y 6 proceden del caso de referencia de la guía; los otros datos son ficticios.</p>
+<h2>Diagrama completo del sistema</h2>
+<p>![Diagrama de clases actual de la variante A](docs/diagrama_actual_variante_A.png)</p>
+<p>[Abrir diagrama en resolución original](docs/diagrama_actual_variante_A.png) · [Tabla de clases corregida](docs/tabla_clases_corregida_A.png) · [Boceto original v1](docs/diagrama_v1.png)</p>
+<p>Se conservan las tres jerarquías: <code>Producto</code> con <code>Plato</code>, <code>Bebida</code> y <code>Combo</code>; <code>Pedido</code> con <code>Local</code>, <code>Llevar</code> y <code>Delivery</code>; <code>MetodoPago</code> con <code>Efectivo</code>, <code>QR</code> y <code>Tarjeta</code>. Las tres bases son abstractas. El gestor es <code>Restaurante</code>; los detalles pertenecen a un pedido y referencian un producto. El combo agrega productos compartidos de forma recursiva.</p>
+<h2>Código y organización</h2>
+<pre><code>
+.
+
+├── main.py                 Menú de consola
+
+├── restaurante.py          Registros, mesas, reportes y JSON
+
+├── datos_demo.py            Datos ficticios de práctica
+
+├── configuracion.json       Datos de la entrega y criterio del reporte
+
+├── pruebas.py               32 casos ejecutables con assert
+
+├── modelo/
+
+│   ├── clientes.py          Cliente
+
+│   ├── productos.py         Producto, Plato, Bebida y Combo
+
+│   ├── pedidos.py           Pedido, modalidades, detalles y estados
+
+│   ├── pagos.py             MetodoPago, Efectivo, QR y Tarjeta
+
+│   ├── reglas.py            Exclusivamente las reglas A
+
+│   └── utilidades.py        Validaciones y redondeo
+
+├── datos/ejemplo_A.json      Archivo ficticio de ejemplo
+
+├── docs/                    Diagramas, manuales y evidencias
+
+└── .github/workflows/       Comprobaciones automáticas en GitHub
+
+</code></pre>
+<h2>Documentación detallada</h2>
+<p class="punto">- [Manual del proyecto y decisiones de diseño](docs/manual_del_proyecto.md).</p>
+<p class="punto">- [Inventario de clases extraído del código](docs/inventario_clases.md).</p>
+<p class="punto">- [Requisitos y evidencias de la guía](docs/requisitos_y_evidencias.md).</p>
+<p class="punto">- [Revisión de cumplimiento y alcance](docs/revision_cumplimiento.md).</p>
+<p class="punto">- [Acta y alcance comunicado por el estudiante](docs/acta_consultas.md).</p>
+<p class="punto">- [Datos de la entrega](docs/datos_y_pendientes.md).</p>
+<p class="punto">- [Preparación para la defensa individual](docs/defensa.md).</p>
+<p class="punto">- [Git, historial y entrega](docs/git_y_entrega.md).</p>
+<p class="punto">- [Bitácora de asistencia de IA](docs/bitacora_ia.md) y [registro personal](docs/registro_ia_saravia.md).</p>
+<p class="punto">- [Verificación de las reglas A](docs/verificacion_reglas_a_24.txt).</p>
+<p><code>LEER_PRIMERO.html</code> reúne los documentos para leerlos localmente en un navegador. En GitHub, los enlaces Markdown anteriores ofrecen navegación directa.</p>
+<h2>Alcance académico y autoría</h2>
+<p>Por indicación del estudiante del 23/11/2026, se excluyó la gestión de retrasos y compensaciones. El top 3 cuenta unidades por producto vendido como línea, incluidos los combos como productos. El cambio de alcance está registrado en el acta y no se atribuye a una confirmación directa del docente.</p>
+<p>El proyecto se preparó con asistencia de IA, identificada en sus registros. La foto v1 no acredita firma docente; la revisión personal, las firmas y la defensa corresponden al estudiante. Los ocho commits iniciales son una incorporación de archivos existentes en una sesión; los siguientes contienen correcciones reales. Ese historial no acredita trabajo distribuido en semanas anteriores.</p>
+<h2>Continuar haciendo cambios</h2>
+<pre><code>
+python pruebas.py
+
+git status
+
+git add ARCHIVOS_MODIFICADOS
+
+git commit -m &quot;Describe el cambio realizado&quot;
+
+git push
+
+</code></pre>
+<p>Publicar el proyecto no lo congela. Cada actualización conserva el historial y vuelve a ejecutar las comprobaciones de Actions. El archivo operativo <code>datos/restaurante.json</code>, los temporales y las cachés de Python están excluidos por <code>.gitignore</code>.</p></section><section id="s1"><h1>Datos y estado de la entrega</h1>
 <div class="tabla"><table>
 <tr><td>Dato</td><td>Valor</td></tr>
 <tr><td>Estudiante</td><td>Brayan Saravia Garay</td></tr>
@@ -255,7 +315,11 @@ importe cobrado = total + comisión de tarjeta si corresponde (efectivo y QR: si
 <h2>Corrección del código según diagrama · 24/11/2026</h2>
 <p>Herramienta: Codex de OpenAI. Uso: corrección del código en el proyecto de VS Code.</p>
 <p>Consulta textual: «CORRIGE ESTO EN L IMAGEN DEL CLASS ROOM QYE HEMOS HEVHO AUI». Aclaración: «EN VS CODE».</p>
-<p>Se aplicó la corrección de reglas de la variante A al código: se eliminaron campos inactivos de otras variantes y opciones C/B; se conservaron los contratos del diagrama y la carga de JSON anteriores. Se comprobaron 32 pruebas y la venta de referencia por consola. La revisión personal del código corresponde al estudiante.</p></section><section id="s6"><h1>Registro personal de uso de IA</h1>
+<p>Se aplicó la corrección de reglas de la variante A al código: se eliminaron campos inactivos de otras variantes y opciones C/B; se conservaron los contratos del diagrama y la carga de JSON anteriores. Se comprobaron 32 pruebas y la venta de referencia por consola. La revisión personal del código corresponde al estudiante.</p>
+<h2>Preparación de la publicación en GitHub · 24/11/2026</h2>
+<p>Herramienta: Codex de OpenAI. Tipo: documentación, comprobaciones y publicación solicitada por el estudiante.</p>
+<p>Consulta textual: «QUIERO QUE COMPLETES CON LAS COSAS QUE FALTAN  SUBE EL REPOSITORIO A GITHUB ,Y HAZ PASAR TOSO A DETALLE ALLA ,».</p>
+<p>El estudiante eligió expresamente visibilidad pública. Se preparó el README con las reglas A, instrucciones, diagrama y enlaces a los documentos; se añadió un flujo de pruebas de GitHub Actions. El estado remoto y su URL se verifican al finalizar la publicación. No se modifican firmas ni declaraciones de comprensión personal del estudiante.</p></section><section id="s6"><h1>Registro personal de uso de IA</h1>
 <p>Estudiante: Brayan Saravia Garay   Variante asignada: A, informada por Brayan el 23/11/2026   Paralelo: B   Fase actual: integración y revisión; no acredita fases anteriores   Docente: Ing. Roy Carrasco</p>
 <p>Este registro se centra en la generación del proyecto y su adaptación a la variante A. Las valoraciones de comprensión y las decisiones de aceptación corresponden a Brayan.</p>
 <div class="tabla"><table>
@@ -284,7 +348,11 @@ importe cobrado = total + comisión de tarjeta si corresponde (efectivo y QR: si
 <h2>Corrección del código según diagrama · 24/11/2026</h2>
 <p>Herramienta: Codex de OpenAI. Uso: corrección del código en el proyecto de VS Code.</p>
 <p>Consulta textual: «CORRIGE ESTO EN L IMAGEN DEL CLASS ROOM QYE HEMOS HEVHO AUI». Aclaración: «EN VS CODE».</p>
-<p>Se aplicó la corrección de reglas de la variante A al código: se eliminaron campos inactivos de otras variantes y opciones C/B; se conservaron los contratos del diagrama y la carga de JSON anteriores. Se comprobaron 32 pruebas y la venta de referencia por consola. La revisión personal del código corresponde al estudiante.</p></section><section id="s7"><h1>Preparación para la defensa individual</h1>
+<p>Se aplicó la corrección de reglas de la variante A al código: se eliminaron campos inactivos de otras variantes y opciones C/B; se conservaron los contratos del diagrama y la carga de JSON anteriores. Se comprobaron 32 pruebas y la venta de referencia por consola. La revisión personal del código corresponde al estudiante.</p>
+<h2>Preparación de la publicación en GitHub · 24/11/2026</h2>
+<p>Herramienta: Codex de OpenAI. Tipo: documentación, comprobaciones y publicación solicitada por el estudiante.</p>
+<p>Consulta textual: «QUIERO QUE COMPLETES CON LAS COSAS QUE FALTAN  SUBE EL REPOSITORIO A GITHUB ,Y HAZ PASAR TOSO A DETALLE ALLA ,».</p>
+<p>El estudiante eligió expresamente visibilidad pública. Se preparó el README con las reglas A, instrucciones, diagrama y enlaces a los documentos; se añadió un flujo de pruebas de GitHub Actions. El estado remoto y su URL se verifican al finalizar la publicación. No se modifican firmas ni declaraciones de comprensión personal del estudiante.</p></section><section id="s7"><h1>Preparación para la defensa individual</h1>
 <p>Brayan Saravia Garay · POO · Paralelo B · Ing. Roy Carrasco</p>
 <h2>Explicar el diagrama en dos minutos</h2>
 <p>Describir primero el recorrido: Restaurante registra un Cliente; el cliente tiene un Pedido; el pedido compone DetalleProducto; cada detalle referencia un Producto. Después mostrar las tres jerarquías y explicar por qué Producto, Pedido y MetodoPago son abstractas. Cerrar con Combo agregando Producto para admitir anidamientos y con ReglasVariante separando los variante A.</p>

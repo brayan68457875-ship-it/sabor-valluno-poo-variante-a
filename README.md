@@ -1,97 +1,161 @@
-# Sistema de pedidos Sabor Valluno · Variante A
+# Sabor Valluno · Sistema de pedidos · Variante A
 
-**Estudiante:** Brayan Saravia Garay  
-**Carrera:** Ingeniería de Sistemas  
-**Asignatura:** Programación Orientada a Objetos  
-**Variante asignada:** A  
-**Paralelo:** B  
-**Docente:** Ing. Roy Carrasco  
-**Entrega:** 24 de noviembre de 2026  
-**Institución:** Universidad Adventista de Bolivia.
+Proyecto académico de **Programación Orientada a Objetos**, desarrollado en Python para administrar los pedidos de un restaurante de comida típica de Cochabamba.
 
-Aplicación de consola en Python para registrar productos, clientes, pedidos y pagos del restaurante ficticio Sabor Valluno. Conserva las clases del diagrama entregado y aplica exclusivamente la variante A, confirmada por Brayan el 23/11/2026. El paralelo del estudiante continúa siendo B.
+| Dato | Información |
+|---|---|
+| Estudiante | Brayan Saravia Garay |
+| Institución | Universidad Adventista de Bolivia |
+| Carrera | Ingeniería de Sistemas |
+| Asignatura y paralelo | Programación Orientada a Objetos · B |
+| Docente | Ing. Roy Carrasco |
+| Fecha de entrega | 24 de noviembre de 2026 |
+| Variante asignada | **A** |
+| Tipo de aplicación | **Consola / terminal** |
+| Tecnología | Python 3.10 o posterior; biblioteca estándar |
 
-## Cómo ejecutarlo
+## Ejecutar el sistema
 
-1. Extraer el ZIP completo y abrir la carpeta `Sabor_Valluno_Variante_A` en VS Code.
-2. Usar Python 3.10 o posterior. No se instala nada con pip: todo utiliza la biblioteca estándar.
-3. Abrir una terminal dentro de esta carpeta y ejecutar:
+Descarga la carpeta desde **Code → Download ZIP**, extrae los archivos y abre la carpeta que contiene `main.py` en VS Code. También puedes clonar el repositorio copiando su URL desde **Code**.
+
+Abre una terminal dentro de esa carpeta:
 
 ```console
-python main.py --variante A --demo
+python main.py --demo
 ```
 
-En Windows también puede usarse `py -3` en lugar de `python`. `python main.py` inicia directamente con la variante A asignada. `--demo` carga productos y un cliente ficticios; omitirlo permite empezar sin registros. Esta entrega rechaza variantes distintas de A.
+En Windows puedes sustituir `python` por `py -3`. No se requiere instalar paquetes con pip. `--demo` carga un cliente y un menú ficticios para practicar; omite ese parámetro si quieres comenzar con un restaurante vacío. La variante A se selecciona automáticamente.
+
+```console
+python main.py
+python main.py --variante A --demo
+python main.py --cargar datos/ejemplo_A.json
+```
+
+Los pagos son una simulación académica; no se realizan transacciones bancarias ni se emiten facturas fiscales. El programa conserva los datos entre sesiones únicamente si se usa la opción de guardar JSON.
+
+## Probar el proyecto
 
 ```console
 python pruebas.py
-python main.py --demo
-python main.py --cargar datos/restaurante.json
 ```
 
-No ejecutar las pruebas con `-O`, porque ese modo elimina las comprobaciones `assert`.
+Hay **32 casos con assert**. Verifican el caso de referencia, combos anidados, detección de ciclos, disponibilidad, envases, mínimos de delivery, mesas, estados, pagos, reportes y persistencia JSON. Incluyen la lectura de archivos antiguos sin activar reglas ajenas a A. No ejecutar con `-O`, porque ese modo elimina los assert.
 
-El menú permite registrar productos y combos, consultar el menú por día, registrar clientes, crear las tres modalidades de pedido, agregar/quitar productos, cambiar estados, cobrar, consultar el detalle, generar reportes y guardar/cargar JSON. La opción 15 permite agregar o quitar componentes de un combo. Los datos se conservan entre sesiones únicamente si se guardan en JSON.
+La pestaña **Actions** ejecuta las pruebas, la comprobación de sintaxis y el inicio de la consola con Python 3.11 y 3.12 después de cada actualización de `main` y en solicitudes de cambios. La configuración está en [pruebas.yml](.github/workflows/pruebas.yml). Los resultados locales de la revisión están en [resultados_pruebas.txt](docs/resultados_pruebas.txt); el resultado del servidor se consulta en Actions.
 
-## Primera demostración
+## Funciones del menú
 
-Con `python main.py --variante A --demo`, elegir 5 para crear un pedido del cliente 1, modalidad 3, zona Quillacollo y una dirección de ejemplo. Elegir 6, seleccionar el pedido 1, agregar el producto 8, cantidad 2. El comprobante mostrará Bs 73,80 de subtotal, Bs 15 de envío y Bs 88,80 de total. Elegir 9 y pagar con QR de diez dígitos o efectivo suficiente. Para entregarlo, elegir 8 sucesivamente con EN_PREPARACION, LISTO y ENTREGADO.
+| Opción | Función |
+|---|---|
+| 1 | Registrar platos, bebidas y combos |
+| 2 | Consultar el menú disponible para un día |
+| 3–4 | Registrar y consultar clientes |
+| 5 | Crear pedidos Local, Llevar o Delivery |
+| 6 | Agregar o quitar productos mientras el pedido sea editable |
+| 7 | Mostrar detalle y comprobante |
+| 8 | Cambiar estado o cancelar cuando corresponda |
+| 9 | Cobrar con Efectivo, QR o Tarjeta |
+| 10 | Reporte diario por modalidad y tres productos más vendidos |
+| 11–12 | Guardar o cargar JSON; funcionalidad opcional de la guía |
+| 13 | Cargar los datos de demostración en un restaurante vacío |
+| 15 | Agregar o quitar componentes de un combo |
+| 0 | Salir |
 
-La demostración usa los precios 35 y 6 que aparecen en la guía; los otros precios y el cliente son ficticios y están identificados en `datos_demo.py`.
+## Reglas de la variante A
 
-## Estructura de la entrega
+| Concepto | Regla implementada |
+|---|---|
+| Combo | Dos o más componentes, incluidos otros combos; 10 % de descuento en cada nivel; sin ciclos |
+| Bebida | Jarra = tres veces el precio por vaso; sin 2×1 |
+| Disponibilidad | Chicharrón solo domingo; un combo exige disponibilidad de todos sus componentes |
+| Local | Mesa 1–15, sin dos pedidos abiertos en la misma mesa; sin cargos adicionales |
+| Llevar | Bs 2 por plato, incluidos los platos dentro de combos; bebidas sin envase |
+| Delivery | Subtotal mínimo Bs 40 |
+| Tarifas | Cercado Bs 8; Quillacollo Bs 15; Sacaba Bs 15; Vinto Bs 20 |
+| Envío gratuito | Solo Cercado con subtotal desde Bs 150 |
+| Efectivo | Debe cubrir el total; calcula cambio; sin redondeo extra a Bs 0,50 |
+| QR | Código de transacción de diez dígitos |
+| Tarjeta | Comisión del 3 %; no admitida para delivery |
+| Validaciones | Precio positivo; cantidad 1–20; teléfono de ocho dígitos que comienza en 6 o 7 |
+
+Los importes se calculan con `Decimal` y se redondean a dos decimales. Los precios de los combos ya incluyen el descuento: no se vuelve a restar al cobrar.
+
+El flujo de estados es `REGISTRADO → EN_PREPARACION → LISTO → ENTREGADO`. Solo se cancela desde `REGISTRADO`. Los pedidos cobrados no permiten edición ni cancelación simple para mantener la consistencia de sus importes.
+
+## Demostración del caso de referencia
+
+Un silpancho de Bs 35 y un vaso de mocochinchi de Bs 6 forman un combo:
 
 ```text
-Sabor_Valluno_Variante_A/
-  main.py                    Menú de consola
-  restaurante.py             Registros, mesas, reportes y JSON
-  datos_demo.py              Datos ficticios para practicar
-  configuracion.json         Datos del estudiante y alcance actual
-  pruebas.py                 Casos ejecutables con assert
-  modelo/
-    clientes.py              Cliente
-    productos.py             Producto, Plato, Bebida, Combo
-    pedidos.py               Pedido, Local, Llevar, Delivery,
-                             DetalleProducto y EstadoPedido
-    pagos.py                 MetodoPago, Efectivo, QR, Tarjeta
-    reglas.py                ReglasVariante, variante A
-    utilidades.py            Importes, fechas y validaciones
-  datos/                     Archivos JSON de ejemplo
-  docs/
-    diagrama_v1.png           Imagen del boceto proporcionado
-    diagrama_v2.png           Diagrama enriquecido actualizado
-    manual_del_proyecto.md   Explicación de funcionamiento y diseño
-    requisitos_y_evidencias.md
-    datos_y_pendientes.md
-    acta_consultas.md
-    bitacora_ia.md
-    registro_ia_saravia.md
-    defensa.md
-    inventario_clases.md
-    resultados_pruebas.txt
-    git_y_entrega.md
+Un combo:             (35 + 6) × 0,90 = Bs 36,90
+Dos combos:               36,90 × 2 = Bs 73,80
+Delivery a Quillacollo:              + Bs 15,00
+Total:                                Bs 88,80
+Efectivo recibido:                    Bs 100,00
+Cambio:                               Bs 11,20
 ```
 
-La fotografía del boceto se conserva como evidencia aportada por el usuario. No se afirma que esté firmada por el docente: esa verificación y la firma corresponden al estudiante y al docente.
+Con los datos demo, crea un delivery del cliente 1 a Quillacollo y agrega dos unidades del producto 8. Elige efectivo o un QR de diez dígitos. Los precios 35 y 6 proceden del caso de referencia de la guía; los otros datos son ficticios.
 
-## Variante A asignada
+## Diagrama completo del sistema
 
-| Perfil | Combo | Envase para llevar | Envío gratis | Mínimo delivery | Particularidad |
-|---|---|---|---|---|---|
-| A | 10 % | Bs 2 por plato | Desde Bs 150, Cercado | Bs 40 | Chicharrón solo domingo |
+![Diagrama de clases actual de la variante A](docs/diagrama_actual_variante_A.png)
 
-Las tarifas son Cercado 8, Quillacollo 15, Sacaba 15 y Vinto 20. En A, solo Cercado ofrece envío gratuito desde Bs 150 de subtotal. El mínimo de delivery es Bs 40. La variante queda fija en A.
+[Abrir diagrama en resolución original](docs/diagrama_actual_variante_A.png) · [Tabla de clases corregida](docs/tabla_clases_corregida_A.png) · [Boceto original v1](docs/diagrama_v1.png)
 
-## Estado y alcance de la entrega
+Se conservan las tres jerarquías: `Producto` con `Plato`, `Bebida` y `Combo`; `Pedido` con `Local`, `Llevar` y `Delivery`; `MetodoPago` con `Efectivo`, `QR` y `Tarjeta`. Las tres bases son abstractas. El gestor es `Restaurante`; los detalles pertenecen a un pedido y referencian un producto. El combo agrega productos compartidos de forma recursiva.
 
-Ya se incorporaron los datos personales que proporcionó Brayan. La institución y la variante A están incorporadas. El repositorio existe localmente y todavía no tiene remoto de GitHub. Ver `docs/datos_y_pendientes.md` y `docs/acta_consultas.md`.
+## Código y organización
 
-El top 3 cuenta unidades por producto vendido como línea, incluidos los combos como productos. Por indicación del estudiante se retiró la gestión de retrasos y compensaciones. El cambio se registra en docs/acta_consultas.md.
+```text
+.
+├── main.py                 Menú de consola
+├── restaurante.py          Registros, mesas, reportes y JSON
+├── datos_demo.py            Datos ficticios de práctica
+├── configuracion.json       Datos de la entrega y criterio del reporte
+├── pruebas.py               32 casos ejecutables con assert
+├── modelo/
+│   ├── clientes.py          Cliente
+│   ├── productos.py         Producto, Plato, Bebida y Combo
+│   ├── pedidos.py           Pedido, modalidades, detalles y estados
+│   ├── pagos.py             MetodoPago, Efectivo, QR y Tarjeta
+│   ├── reglas.py            Exclusivamente las reglas A
+│   └── utilidades.py        Validaciones y redondeo
+├── datos/ejemplo_A.json      Archivo ficticio de ejemplo
+├── docs/                    Diagramas, manuales y evidencias
+└── .github/workflows/       Comprobaciones automáticas en GitHub
+```
 
-La gestión de retrasos y compensaciones que aparecía en la guía original se excluye del alcance actual por indicación del estudiante del 23/11/2026.
+## Documentación detallada
 
-Los diagramas y el código se prepararon con ayuda de IA. La bitácora registra la asistencia; la revisión y comprensión son responsabilidad del estudiante. La firma, la defensa, las consultas reales, el historial de trabajo de semanas anteriores y la publicación en GitHub requieren actuaciones reales del estudiante; no se han fabricado.
+- [Manual del proyecto y decisiones de diseño](docs/manual_del_proyecto.md).
+- [Inventario de clases extraído del código](docs/inventario_clases.md).
+- [Requisitos y evidencias de la guía](docs/requisitos_y_evidencias.md).
+- [Revisión de cumplimiento y alcance](docs/revision_cumplimiento.md).
+- [Acta y alcance comunicado por el estudiante](docs/acta_consultas.md).
+- [Datos de la entrega](docs/datos_y_pendientes.md).
+- [Preparación para la defensa individual](docs/defensa.md).
+- [Git, historial y entrega](docs/git_y_entrega.md).
+- [Bitácora de asistencia de IA](docs/bitacora_ia.md) y [registro personal](docs/registro_ia_saravia.md).
+- [Verificación de las reglas A](docs/verificacion_reglas_a_24.txt).
 
-## Historial local de esta incorporación
+`LEER_PRIMERO.html` reúne los documentos para leerlos localmente en un navegador. En GitHub, los enlaces Markdown anteriores ofrecen navegación directa.
 
-Los archivos existentes se incorporan en ocho commits por componentes, todos con las fechas reales de esta sesión. Este historial no acredita semanas de trabajo anteriores. Consultar `docs/git_y_entrega.md`. El repositorio no se ha publicado en GitHub.
+## Alcance académico y autoría
+
+Por indicación del estudiante del 23/11/2026, se excluyó la gestión de retrasos y compensaciones. El top 3 cuenta unidades por producto vendido como línea, incluidos los combos como productos. El cambio de alcance está registrado en el acta y no se atribuye a una confirmación directa del docente.
+
+El proyecto se preparó con asistencia de IA, identificada en sus registros. La foto v1 no acredita firma docente; la revisión personal, las firmas y la defensa corresponden al estudiante. Los ocho commits iniciales son una incorporación de archivos existentes en una sesión; los siguientes contienen correcciones reales. Ese historial no acredita trabajo distribuido en semanas anteriores.
+
+## Continuar haciendo cambios
+
+```console
+python pruebas.py
+git status
+git add ARCHIVOS_MODIFICADOS
+git commit -m "Describe el cambio realizado"
+git push
+```
+
+Publicar el proyecto no lo congela. Cada actualización conserva el historial y vuelve a ejecutar las comprobaciones de Actions. El archivo operativo `datos/restaurante.json`, los temporales y las cachés de Python están excluidos por `.gitignore`.

@@ -60,3 +60,11 @@ Herramienta: Codex de OpenAI. Uso: corrección del código en el proyecto de VS 
 Consulta textual: «CORRIGE ESTO EN L IMAGEN DEL CLASS ROOM QYE HEMOS HEVHO AUI». Aclaración: «EN VS CODE».
 
 Se aplicó la corrección de reglas de la variante A al código: se eliminaron campos inactivos de otras variantes y opciones C/B; se conservaron los contratos del diagrama y la carga de JSON anteriores. Se comprobaron 32 pruebas y la venta de referencia por consola. La revisión personal del código corresponde al estudiante.
+
+## Preparación de la publicación en GitHub · 24/11/2026
+
+Herramienta: Codex de OpenAI. Tipo: documentación, comprobaciones y publicación solicitada por el estudiante.
+
+Consulta textual: «QUIERO QUE COMPLETES CON LAS COSAS QUE FALTAN  SUBE EL REPOSITORIO A GITHUB ,Y HAZ PASAR TOSO A DETALLE ALLA ,».
+
+El estudiante eligió expresamente visibilidad pública. Se preparó el README con las reglas A, instrucciones, diagrama y enlaces a los documentos; se añadió un flujo de pruebas de GitHub Actions. El estado remoto y su URL se verifican al finalizar la publicación. No se modifican firmas ni declaraciones de comprensión personal del estudiante.

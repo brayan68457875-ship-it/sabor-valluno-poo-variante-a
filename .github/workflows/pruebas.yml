@@ -1,0 +1,32 @@
+name: Pruebas del sistema
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    name: Python ${{ matrix.python }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v6
+      - name: Preparar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Comprobar la sintaxis
+        run: python -m compileall -q main.py restaurante.py datos_demo.py pruebas.py modelo
+      - name: Ejecutar pruebas de la variante A
+        run: python pruebas.py
+      - name: Comprobar el inicio de la consola
+        run: printf '0\n' | python main.py --demo
