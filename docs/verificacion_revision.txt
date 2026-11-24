@@ -1,0 +1,11 @@
+REVISIÓN TÉCNICA CONTRA LA GUÍA · 23/11/2026
+
+Tres clases abstractas, nueve subclases concretas y nueve llamadas a super: verificado.
+Sintaxis y uso exclusivo de biblioteca estándar en todos los módulos: verificado.
+Pedido y productos no deciden el cálculo mediante type() ni isinstance(): verificado.
+Archivos mínimos de código, diagramas y registros: presentes (su presencia no acredita firmas ni contenido personal completo).
+Menú real: alta de plato, bebida, combo y cliente; consulta de disponibilidad; tres modalidades; agregar/quitar; estados y cancelación; tres medios de pago; comprobantes y reporte: verificado.
+Cobros de integración: Local con Tarjeta Bs 46,35; Llevar en Efectivo Bs 77,71; Delivery con QR Bs 88,80; reporte total Bs 212,86.
+JSON opcional: guardado y carga de las tres ventas y pedido cancelado, sin alterar importes: verificado.
+
+Pruebas del proyecto ejecutadas por separado en esta revisión: 30/30 aprobadas.

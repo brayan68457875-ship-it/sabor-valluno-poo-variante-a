@@ -150,17 +150,6 @@ def prueba_pedido_cobrado_inmutable():
     debe_fallar(lambda: pedido.items[0].cambiar_cantidad(2))
     debe_fallar(lambda: pedido.agregar_producto(bebida, 1))
 
-def prueba_retraso_frontera_y_compensacion():
-    reglas, plato, bebida, combo = productos()
-    for minutos, esperado in [(60, '0'), (61, '15')]:
-        pedido = Delivery(1, CLIENTE, reglas, 'Quillacollo', 'Dirección', LUNES)
-        pedido.agregar_producto(combo, 2)
-        pedido.cambiar_estado(EstadoPedido.EN_PREPARACION)
-        pedido.cambiar_estado(EstadoPedido.LISTO)
-        pedido.registrar_entrega(LUNES + timedelta(minutes=minutos))
-        assert pedido.calcular_compensacion() == dinero(esperado)
-        assert pedido.calcular_retraso() == max(0, minutos - 60)
-
 def prueba_reporte_y_top():
     restaurante = Restaurante(reglas=ReglasVariante('A'))
     cargar_demostracion(restaurante)
@@ -338,7 +327,7 @@ def prueba_json_a_tres_medios_y_cotizacion():
             assert nuevo.pedidos[1].calcular_total() == dinero('73.80')
             assert nuevo.pedidos[1].generar_comprobante() == pedido.generar_comprobante()
 
-def prueba_delivery_a_retrasado_json():
+def prueba_delivery_a_entrega_json():
     with tempfile.TemporaryDirectory() as carpeta:
         restaurante = Restaurante()
         cargar_demostracion(restaurante)
@@ -352,7 +341,7 @@ def prueba_delivery_a_retrasado_json():
         ruta = Path(carpeta) / 'delivery_a.json'
         restaurante.guardar_json(ruta)
         nuevo = Restaurante.cargar_json(ruta)
-        assert nuevo.pedidos[1].calcular_compensacion() == dinero(15)
+        assert nuevo.pedidos[1].fecha_entrega == pedido.fecha_entrega
         assert nuevo.reporte_ventas(date.today()) == restaurante.reporte_ventas(date.today())
 
 def prueba_combo_a_minimo_sin_maximo_c():

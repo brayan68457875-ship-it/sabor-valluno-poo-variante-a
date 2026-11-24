@@ -1,22 +1,15 @@
-# Acta de consultas al docente
+# Registro de alcance y consultas
 
 Estudiante: Brayan Saravia Garay  
-Paralelo: B  
-Docente: Ing. Roy Carrasco  
-Fecha de entrega: 24/11/2026  
-Variante: **A, informada por el estudiante**. Las consultas de negocio restantes siguen pendientes.
+Institución: Universidad Adventista de Bolivia  
+Carrera: Ingeniería de Sistemas · Paralelo B  
+Docente: Ing. Roy Carrasco · Entrega: 24/11/2026  
+Variante: A
 
-El estudiante informó que el docente no confirmó estas cuestiones. Esta acta prepara las preguntas; no acredita una conversación que no ocurrió.
+## Alcance actual comunicado por el estudiante el 23/11/2026
 
-| N.º | Fecha real de consulta | Pregunta para el docente | Respuesta real | Situación del proyecto |
-|---|---|---|---|---|
-| 1 | 23/11/2026, comunicación del estudiante | Variante asignada | Brayan informa variante A. No se atribuye una consulta directa al docente. | Configuración A incorporada. |
-| 4 | Pendiente | Para el top 3, ¿cada combo cuenta como producto vendido o se desglosan sus componentes? ¿El día corresponde al cobro? | Pendiente | Propuesta actual: líneas, fecha del cobro; empates por id ascendente. Conteo configurable. |
-| 5 | Pendiente | ¿Se confirma que delivery tiene retraso después de 60 minutos desde el registro y se devuelve el costo del envío? | Pendiente | Ese criterio figura como respuesta en el documento y se implementó según esa fuente; falta registrar la confirmación real. |
-| 6 | Pendiente | ¿Está de acuerdo con conservar la cotización al agregar un producto y bloquear edición/cancelación después de cobrar? | Pendiente | Medida explícita de consistencia contable de esta implementación. |
-| 7 | Pendiente | El documento dice 3 semanas, pero detalla semanas 1–4. ¿Cuál es el calendario aplicable? | Pendiente | Se usa únicamente la fecha de entrega indicada por el estudiante, sin reconstruir semanas. |
+Se excluye la gestión de retrasos y compensaciones de delivery. El reporte de los tres productos más vendidos se conserva y cuenta unidades por producto vendido como línea; los combos cuentan como productos vendidos, sin desglosarlos en este reporte.
 
-Después de consultar: escribir la fecha, sustituir «Pendiente» por la respuesta literal o una paráfrasis fiel, aplicar los cambios necesarios, actualizar las pruebas y volver a ejecutarlas. No cambiar `consultas_confirmadas` a `true` solo para ocultar el aviso.
+La indicación procede del estudiante en esta conversación. No se afirma que hubo una consulta directa ni una confirmación del docente. Las preguntas que figuraban sobre estos puntos se retiran del alcance actual.
 
-Firma del estudiante: ____________________  
-Verificación del docente, si corresponde: ____________________
+La guía original incluía una regla de retraso y exigía consultarla. Esta entrega registra la exclusión solicitada por el estudiante, por lo que no presenta esa regla como cumplida. Los datos de ventas, cobros, estados y fechas de entrega se mantienen.

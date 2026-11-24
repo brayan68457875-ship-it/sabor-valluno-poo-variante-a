@@ -95,19 +95,16 @@ class Restaurante:
         return sorted(acumulado.values(), key=lambda dato: (-dato['cantidad'], dato['id_producto']))[:3]
 
     def reporte_ventas(self, fecha: date) -> dict:
-        resumen = {modalidad: {'pedidos': 0, 'total_pedidos': dinero(0), 'cobrado': dinero(0),
-                                'compensacion': dinero(0)} for modalidad in ('local', 'llevar', 'delivery')}
+        resumen = {modalidad: {'pedidos': 0, 'total_pedidos': dinero(0), 'cobrado': dinero(0)} for modalidad in ('local', 'llevar', 'delivery')}
         for pedido in self._ventas_del_dia(fecha):
             dato = resumen[pedido.modalidad]
             dato['pedidos'] += 1
             dato['total_pedidos'] += pedido.calcular_total()
             dato['cobrado'] += pedido.pago.monto_cobrado
-            dato['compensacion'] += pedido.calcular_compensacion()
         return {'fecha': fecha.isoformat(), 'por_modalidad': resumen,
                 'top_3': self.productos_mas_vendidos(fecha),
                 'criterio_top': self.reglas.decisiones['top_productos'],
-                'cobrado_total': sum((d['cobrado'] for d in resumen.values()), dinero(0)),
-                'compensacion_total': sum((d['compensacion'] for d in resumen.values()), dinero(0))}
+                'cobrado_total': sum((d['cobrado'] for d in resumen.values()), dinero(0))}
 
     def guardar_json(self, ruta):
         datos = {'version': 1, 'nombre': self.nombre, 'reglas': self.reglas.a_dict(),
@@ -162,7 +159,7 @@ class Restaurante:
                 'Local': lambda: Local(*argumentos, registro['mesa'], fecha),
                 'Llevar': lambda: Llevar(*argumentos, fecha),
                 'Delivery': lambda: Delivery(*argumentos, registro['zona'], registro['direccion_entrega'], fecha,
-                                              registro['limite_retraso_min'], registro['tarifas']),
+                                              registro['tarifas']),
             }
             pedido = fabricas_pedidos[registro['clase']]()
             pedido.restaurar_historial(registro, restaurante.productos)

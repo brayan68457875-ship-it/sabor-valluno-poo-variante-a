@@ -7,7 +7,7 @@
 **Paralelo:** B  
 **Docente:** Ing. Roy Carrasco  
 **Entrega:** 24 de noviembre de 2026  
-**Institución:** pendiente de indicar.
+**Institución:** Universidad Adventista de Bolivia.
 
 Aplicación de consola en Python para registrar productos, clientes, pedidos y pagos del restaurante ficticio Sabor Valluno. Conserva las clases del diagrama entregado y aplica exclusivamente la variante A, confirmada por Brayan el 23/11/2026. El paralelo del estudiante continúa siendo B.
 
@@ -46,7 +46,7 @@ Sabor_Valluno_Variante_A/
   main.py                    Menú de consola
   restaurante.py             Registros, mesas, reportes y JSON
   datos_demo.py              Datos ficticios para practicar
-  configuracion.json         Datos del estudiante y decisiones pendientes
+  configuracion.json         Datos del estudiante y alcance actual
   pruebas.py                 Casos ejecutables con assert
   modelo/
     clientes.py              Cliente
@@ -82,15 +82,15 @@ La fotografía del boceto se conserva como evidencia aportada por el usuario. No
 
 Las tarifas son Cercado 8, Quillacollo 15, Sacaba 15 y Vinto 20. En A, solo Cercado ofrece envío gratuito desde Bs 150 de subtotal. El mínimo de delivery es Bs 40. La variante queda fija en A.
 
-## Datos que faltan y límites de la entrega
+## Estado y alcance de la entrega
 
-Ya se incorporaron los datos personales que proporcionó Brayan. Faltan la institución y el enlace del repositorio. La variante asignada A ya está incorporada. Las consultas de reglas siguen sin confirmar por el docente. Ver `docs/datos_y_pendientes.md` y `docs/acta_consultas.md`.
+Ya se incorporaron los datos personales que proporcionó Brayan. La institución y la variante A están incorporadas. El repositorio existe localmente y todavía no tiene remoto de GitHub. Ver `docs/datos_y_pendientes.md` y `docs/acta_consultas.md`.
 
-La interpretación pendiente del top 3 cuenta las líneas vendidas, incluidos combos como productos; puede configurarse para desglosar componentes. Las dudas de B y C ya no aplican a esta entrega A. No se atribuyen respuestas al docente.
+El top 3 cuenta unidades por producto vendido como línea, incluidos los combos como productos. Por indicación del estudiante se retiró la gestión de retrasos y compensaciones. El cambio se registra en docs/acta_consultas.md.
 
-La regla de retraso de más de 60 minutos y devolución del costo de envío se obtuvo de la respuesta escrita en el propio documento. No se presenta como una consulta efectivamente realizada. La compensación se muestra como obligación calculada, no como una devolución bancaria real.
+La gestión de retrasos y compensaciones que aparecía en la guía original se excluye del alcance actual por indicación del estudiante del 23/11/2026.
 
-Los diagramas y el código se prepararon con ayuda de IA. La bitácora registra esa ayuda y deja pendiente la revisión y comprensión personal. La firma, la defensa, las consultas reales, el historial de trabajo de semanas anteriores y la publicación en GitHub requieren actuaciones reales del estudiante; no se han fabricado.
+Los diagramas y el código se prepararon con ayuda de IA. La bitácora registra la asistencia; la revisión y comprensión son responsabilidad del estudiante. La firma, la defensa, las consultas reales, el historial de trabajo de semanas anteriores y la publicación en GitHub requieren actuaciones reales del estudiante; no se han fabricado.
 
 ## Historial local de esta incorporación
 

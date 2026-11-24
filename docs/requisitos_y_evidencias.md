@@ -2,7 +2,7 @@
 
 | Requisito | Evidencia concreta | Estado |
 |---|---|---|
-| Diagrama v1 | `diagrama_v1.png`: fotografía aportada | Aportado; firma/verificación docente pendiente |
+| Diagrama v1 | `diagrama_v1.png`: fotografía aportada | Fotografía aportada; no acredita firma docente |
 | Diagrama v2 enriquecido | `diagrama_v2.png` y notas de cambios | Incluido |
 | Tres clases abstractas | Producto, Pedido y MetodoPago con ABC y abstractmethod | Implementado y probado |
 | Nueve subclases y super | Tres subclases por jerarquía | Implementado |
@@ -14,19 +14,19 @@
 | Registrar clientes y validar teléfono | Opción 3 | Implementado y probado |
 | Tres modalidades de pedido | Opción 5 | Implementado |
 | Agregar/quitar solo en REGISTRADO | Opción 6; validación en Pedido/DetalleProducto | Implementado y probado |
-| Desglose monetario | Opción 7, comprobante | Implementado |
+| Desglose monetario | Opción 7, comprobante | Implementado; se aclara que el 10 % de combos ya está incluido y no se resta dos veces |
 | Transiciones y cancelación | Opción 8 | Implementado y probado |
 | Efectivo, QR y Tarjeta; restricciones delivery | Opción 9 | Implementado y probado |
-| Reporte por modalidad y top 3 | Opción 10 | Implementado; criterio pendiente de confirmación |
+| Reporte por modalidad y top 3 | Opción 10 | Implementado; cantidades por producto vendido como línea |
 | JSON opcional | Opciones 11 y 12 | Implementado y probado |
 | Variante A asignada | ReglasVariante, configuración e inicio directo | Confirmada por el estudiante e implementada |
 | Casos con assert, mínimo 8 | pruebas.py; referencias recalculadas y combo anidado | Incluido, resultado real adjunto |
-| Retraso y compensación | Delivery; frontera 60/61 minutos | Implementado según respuesta incluida en la guía; consulta real pendiente |
+| Regla de retraso de la guía original | Retirada a petición del estudiante el 23/11/2026 | Excluida del alcance actual; no se presenta como requisito cumplido |
 | Código de consola y biblioteca estándar | main.py y módulos del proyecto | Incluido, sin pip |
-| Bitácora de IA | bitacora_ia.md | Usos de esta sesión registrados; revisión personal pendiente |
-| Registro por estudiante | registro_ia_saravia.md | Preparado con usos conocidos; comprensión y firma pendientes |
-| Acta de consultas | acta_consultas.md | Preguntas preparadas; sin respuestas docentes confirmadas |
-| Git y GitHub | .gitignore y git_y_entrega.md | Ocho bloques de importación local en esta sesión; URL/publicación y evidencias temporales personales pendientes |
+| Bitácora de IA | bitacora_ia.md | Registro centrado en generación/adaptación; verificar completitud de todos los usos según la guía |
+| Registro por estudiante | registro_ia_saravia.md | Aceptación, cambios personales y comprensión deben corresponder a la revisión real; declaración sin firma |
+| Acta de consultas | acta_consultas.md | Alcance registrado; no se inventan respuestas docentes |
+| Git y GitHub | .gitignore y git_y_entrega.md | Ocho bloques de importación local en esta sesión; sin remoto GitHub; no acredita fases de semanas anteriores |
 | Commits en semanas anteriores | Evidencia que debe aportar el estudiante | No se fabrica |
 | Defensa individual sin IA | defensa.md | Preparación incluida; ejecución corresponde al estudiante |
 

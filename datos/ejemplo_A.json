@@ -6,8 +6,7 @@
     "decisiones": {
       "conteo_productos_c": "hojas",
       "promo_dentro_combos": false,
-      "top_productos": "lineas",
-      "consultas_confirmadas": false
+      "top_productos": "lineas"
     }
   },
   "productos": [
@@ -176,7 +175,6 @@
       "zona": "Quillacollo",
       "direccion_entrega": "Dirección ficticia de prueba",
       "fecha_entrega": "2026-11-23T17:26:06.257625",
-      "limite_retraso_min": 60,
       "tarifas": {
         "Cercado": "8.00",
         "Quillacollo": "15.00",

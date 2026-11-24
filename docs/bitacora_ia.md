@@ -15,15 +15,15 @@ Esta bitácora se centra en la generación del proyecto y su adaptación a la va
 
 > ahora quiero que me lo hagas todo lo qeu esta solicitando el documento, y me infromes lo que tiene que tener mis datos , todo siempre en base al diagrama  que me proporcionaste
 
-**Resultado producido por la herramienta:** Se generaron código, pruebas, manuales y registros a partir del diagrama; las consultas docentes y evidencias personales siguen pendientes.  
-**Qué aceptó personalmente el estudiante:** pendiente de su revisión; el uso del diagrama como base sí fue solicitado.  
-**Qué modificó personalmente y por qué:** pendiente de completar con acciones reales.  
+**Resultado producido por la herramienta:** Se generaron código, pruebas, manuales y registros a partir del diagrama; el alcance actual se recoge en el acta; las evidencias personales no se generan automáticamente.  
+**Qué aceptó personalmente el estudiante:** revisión personal a cargo del estudiante; el uso del diagrama como base sí fue solicitado.  
+**Qué modificó personalmente y por qué:** registrar únicamente acciones personales reales.  
 **Archivos afectados:** modelo/, restaurante.py, main.py, pruebas.py y docs/.  
-**¿Lo explica sin ayuda?:** pendiente de comprobar por Brayan.
+**¿Lo explica sin ayuda?:** no evaluado personalmente por Brayan en este registro.
 
 ## Alcance de la declaración
 
-La ayuda incluyó generación de código, pruebas y documentos, además de aclaraciones de diseño. No debe registrarse únicamente como «corrección de errores». Las pruebas ejecutadas por la herramienta no sustituyen la revisión del estudiante. Brayan puede añadir todas sus consultas posteriores aquí y en su registro personal, conservando el texto, lo aceptado, lo cambiado y la razón.
+La ayuda incluyó generación de código, pruebas y documentos, además de aclaraciones de implementación. No debe registrarse únicamente como «corrección de errores». Las pruebas ejecutadas por la herramienta no sustituyen la revisión del estudiante. Brayan puede añadir todas sus consultas posteriores aquí y en su registro personal, conservando el texto, lo aceptado, lo cambiado y la razón.
 
 ## Actualización del 23/11/2026 · Variante asignada A
 
@@ -33,7 +33,7 @@ Consulta textual:
 
 > ya tengo el dato de la variante ,quiero que lo hagas con la variante A
 
-Se preparó una entrega exclusiva A: inicio directo, reglas A, diagrama, ejemplos y pruebas enfocados en A. La variante la informó el estudiante; no se registra como respuesta directa obtenida del docente. Las consultas de negocio continúan pendientes. Aceptación y comprensión personal del código: pendientes de revisión por Brayan.
+Se preparó una entrega exclusiva A: inicio directo, reglas A, diagrama, ejemplos y pruebas enfocados en A. La variante la informó el estudiante; no se registra como respuesta directa obtenida del docente. El alcance vigente se registra en el acta. La aceptación y comprensión personal deben ser revisadas por Brayan.
 
 ## Registro de incorporación a Git · 23/11/2026
 
@@ -43,4 +43,12 @@ Consulta textual:
 
 > muy bien ahora en vscode del sistema de sabor valluno , abre y realiza minimamente 8 commits como esta solicitando el documento
 
-Se organizó la incorporación del proyecto existente en ocho bloques de archivos. Los commits usan las fechas actuales de Git y la identidad indicada por el usuario. No representan desarrollo en semanas anteriores. Se verificó la ejecución de 31 pruebas. Revisión y comprensión personal del estudiante: pendientes.
+Se organizó la incorporación del proyecto existente en ocho bloques de archivos. Los commits usan las fechas actuales de Git y la identidad indicada por el usuario. No representan desarrollo en semanas anteriores. Se verificó la ejecución de 31 pruebas. La revisión y comprensión personal corresponden al estudiante.
+
+## Revisión del alcance · 23/11/2026
+
+Herramienta: Codex de OpenAI. Uso: revisión de requisitos y ajustes de código y documentos.
+
+Consulta: «quiero que una vez mas revises el documento y veas y si falta cumplir algo pra que lo vayamos ejecutando».
+
+El estudiante proporcionó la institución Universidad Adventista de Bolivia y pidió descartar las cuestiones de retrasos y consultas del reporte. Se retiraron retrasos/compensaciones y sus avisos, se mantuvo el top 3 por cantidad de líneas vendidas y se aclaró el descuento ya incluido en combos. El cambio de alcance procede del estudiante, sin afirmar aprobación docente. La revisión personal del material corresponde a Brayan.

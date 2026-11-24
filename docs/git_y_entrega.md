@@ -37,4 +37,4 @@ git log --format="%h %ai %s"
 
 Los commits se guardan localmente. No se ha publicado este repositorio en GitHub y falta su URL. Una vez creado el repositorio remoto correcto, el estudiante puede añadirlo y publicarlo siguiendo su flujo de trabajo. No se modificó el proyecto distinto llamado «proyecto algebra».
 
-Las firmas, consultas y evidencias del trabajo personal siguen pendientes de las actuaciones reales que correspondan. Los cambios futuros deben producir commits que describan cambios efectivos; no se cambian fechas para simular trabajo anterior.
+La firma, defensa y evidencia del trabajo personal corresponden a actuaciones reales del estudiante. El acta describe el alcance actual. Los cambios futuros deben producir commits que describan cambios efectivos; no se cambian fechas para simular trabajo anterior.

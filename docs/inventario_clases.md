@@ -4,7 +4,7 @@ Este inventario se extrae de las definiciones reales. Complementa el diagrama, q
 
 ## Cambios finales respecto al diagrama proporcionado
 
-Se añadieron al dibujo el cobro centralizado y JSON en Restaurante, el diccionario de decisiones pendientes en ReglasVariante, la tarifa como argumento de calcular_envio, los contratos de conteo y compatibilidad necesarios, el cálculo por cantidad de Combo y la cotización histórica de DetalleProducto. La fecha de un pago admite None antes de procesarlo. No se sustituyó ninguna de las tres jerarquías.
+Se añadieron al dibujo el cobro centralizado y JSON en Restaurante, el diccionario de decisiones de reporte en ReglasVariante, la tarifa como argumento de calcular_envio, los contratos de conteo y compatibilidad necesarios, el cálculo por cantidad de Combo y la cotización histórica de DetalleProducto. La fecha de un pago admite None antes de procesarlo. No se sustituyó ninguna de las tres jerarquías.
 
 La implementación agrega auxiliares de persistencia y validación, sin introducir nuevas clases de negocio. El diagrama original entregado antes de programar se conserva como diagrama_base_proporcionado.png.
 
@@ -172,7 +172,6 @@ Archivo: `modelo/pedidos.py`. Base: ABC.
 | `registrar_entrega(self, fecha: datetime.datetime)` | público |
 | `validar_pago(self, pago)` | público |
 | `cobrar(self, metodo) -> decimal.Decimal` | público |
-| `calcular_compensacion(self) -> decimal.Decimal` | público |
 | `mesa_ocupada(self)` | público |
 | `generar_comprobante(self) -> str` | público |
 | `a_dict(self)` | público |
@@ -212,22 +211,19 @@ Archivo: `modelo/pedidos.py`. Base: Pedido.
 
 Archivo: `modelo/pedidos.py`. Base: Pedido.
 
-**Campos asignados por esta clase** (incluye inicialización de campos heredados): `_direccion_entrega`, `_fecha_entrega`, `_limite_retraso_min`, `_modalidad`, `_tarifas`, `_zona`.
+**Campos asignados por esta clase** (incluye inicialización de campos heredados): `_direccion_entrega`, `_fecha_entrega`, `_modalidad`, `_tarifas`, `_zona`.
 
 | Miembro declarado | Contrato |
 |---|---|
-| `__init__(self, id_pedido: int, cliente, reglas, zona: str, direccion_entrega: str, fecha_registro=None, limite_retraso_min=60, tarifas=None)` | constructor |
+| `__init__(self, id_pedido: int, cliente, reglas, zona: str, direccion_entrega: str, fecha_registro=None, tarifas=None)` | constructor |
 | `zona` | Propiedad; solo lectura |
 | `direccion_entrega` | Propiedad; solo lectura |
 | `fecha_entrega` | Propiedad; solo lectura |
-| `limite_retraso_min` | Propiedad; solo lectura |
 | `tarifas` | Propiedad; solo lectura |
 | `calcular_cargos(self) -> decimal.Decimal` | público |
 | `validar_minimo(self)` | público |
 | `validar_pago(self, pago)` | público |
 | `registrar_entrega(self, fecha: datetime.datetime)` | público |
-| `calcular_retraso(self) -> float` | público |
-| `calcular_compensacion(self) -> decimal.Decimal` | público |
 | `a_dict(self)` | público |
 | `restaurar_historial(self, datos, productos, pago=None)` | público |
 
@@ -357,3 +353,7 @@ Archivo: `modelo/reglas.py`. Base: object.
 | `ajustar_efectivo(self, total)` | público |
 | `a_dict(self)` | público |
 
+
+## Ajuste del alcance del 23/11/2026
+
+Se retiraron los métodos de retraso y compensación y el campo limite_retraso_min. Delivery conserva fecha_entrega y registrar_entrega(). La estructura de tres jerarquías y nueve subclases se mantiene.

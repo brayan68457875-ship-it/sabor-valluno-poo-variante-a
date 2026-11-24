@@ -35,4 +35,4 @@ El ejercicio de Postre es una preparación de defensa, no una clase adicional en
 
 ## Lista personal antes de presentar
 
-Ejecutar el sistema desde cero, repetir una venta completa, guardar/cargar, ejecutar pruebas, comprobar que la variante activa sea A y revisar las consultas pendientes. Poder justificar cada decisión del acta y reconocer lo que aún no confirmó el docente. Completar el registro de IA con la comprensión real; no firmar afirmaciones que todavía no se puedan sostener.
+Ejecutar el sistema desde cero, repetir una venta completa, guardar/cargar, ejecutar pruebas, comprobar que la variante activa sea A y revisar el alcance registrado. Poder justificar cada decisión del acta y explicar el alcance elegido. Completar el registro de IA con la comprensión real; no firmar afirmaciones que todavía no se puedan sostener.

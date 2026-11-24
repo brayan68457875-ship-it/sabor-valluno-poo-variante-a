@@ -48,7 +48,7 @@ def mostrar_productos(restaurante, disponibles=None):
 
 def menu_disponible(restaurante):
     dia = input('Día (vacío = hoy): ').strip() or dia_fecha(date.today())
-    print(f'Precios unitarios antes de promociones por cantidad | Variante {restaurante.reglas.codigo}')
+    print(f'Precios unitarios en Bs | Variante {restaurante.reglas.codigo} | Los combos ya incluyen el 10 % de descuento.')
     mostrar_productos(restaurante, restaurante.listar_menu(dia))
 
 def registrar_cliente(restaurante):
@@ -152,8 +152,6 @@ def principal():
         if argumentos.demo: cargar_demostracion(restaurante)
     print('\nSABOR VALLUNO | Sistema de consola | Simulación académica')
     print('Estudiante: Brayan Saravia Garay | Variante asignada:', restaurante.reglas.codigo)
-    if not restaurante.reglas.decisiones['consultas_confirmadas']:
-        print('Hay decisiones propuestas pendientes de consulta. Revise docs/acta_consultas.md y configuracion.json.')
     while True:
         print('\n1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente')
         print('4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos')

@@ -1,0 +1,567 @@
+
+SABOR VALLUNO | Sistema de consola | Simulación académica
+Estudiante: Brayan Saravia Garay | Variante asignada: A
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Producto: 1 Plato, 2 Bebida, 3 Combo: Nombre: Precio en Bs: Días separados por coma (vacío = todos o restricción de variante): Producto #10 registrado. Precio: Bs 20.00
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Producto: 1 Plato, 2 Bebida, 3 Combo: Nombre: Precio por vaso en Bs: Presentación (vaso/jarra): ¿Refresco natural? (s/n): Producto #11 registrado. Precio: Bs 5.00
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Producto: 1 Plato, 2 Bebida, 3 Combo: Nombre: 1: Silpancho | Bs 35.00
+2: Pique macho | Bs 45.00
+3: Chicharrón | Bs 40.00
+4: Sopa de maní | Bs 15.00
+5: Mocochinchi vaso | Bs 6.00
+6: Mocochinchi jarra | Bs 18.00
+7: Gaseosa vaso | Bs 5.00
+8: Combo silpancho y mocochinchi | Bs 36.90
+9: Combo anidado familiar | Bs 73.71
+10: Plato de revisión | Bs 20.00
+11: Refresco de revisión | Bs 5.00
+IDs de al menos 2 componentes, separados por coma: Producto #12 registrado. Precio: Bs 22.50
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Día (vacío = hoy): Precios unitarios en Bs | Variante A | Los combos ya incluyen el 10 % de descuento.
+1: Silpancho | Bs 35.00
+2: Pique macho | Bs 45.00
+4: Sopa de maní | Bs 15.00
+5: Mocochinchi vaso | Bs 6.00
+6: Mocochinchi jarra | Bs 18.00
+7: Gaseosa vaso | Bs 5.00
+8: Combo silpancho y mocochinchi | Bs 36.90
+9: Combo anidado familiar | Bs 73.71
+10: Plato de revisión | Bs 20.00
+11: Refresco de revisión | Bs 5.00
+12: Combo de revisión | Bs 22.50
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Nombre del cliente: Teléfono: Dirección (opcional): Cliente #2 registrado.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: Cliente de demostración | 70000001 | Dirección ficticia, Cochabamba
+2: Cliente de revisión | 71234568 | Dirección ficticia
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: Cliente de demostración
+2: Cliente de revisión
+ID de cliente: Modalidad: 1 Local, 2 Llevar, 3 Delivery: Mesa (1–15): Pedido #1 creado. Agregue productos con la opción 6.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | REGISTRADO
+ID del pedido: 1 Agregar producto | 2 Quitar producto: 1: Silpancho | Bs 35.00
+2: Pique macho | Bs 45.00
+3: Chicharrón | Bs 40.00
+4: Sopa de maní | Bs 15.00
+5: Mocochinchi vaso | Bs 6.00
+6: Mocochinchi jarra | Bs 18.00
+7: Gaseosa vaso | Bs 5.00
+8: Combo silpancho y mocochinchi | Bs 36.90
+9: Combo anidado familiar | Bs 73.71
+10: Plato de revisión | Bs 20.00
+11: Refresco de revisión | Bs 5.00
+12: Combo de revisión | Bs 22.50
+ID del producto: Cantidad (1–20): SABOR VALLUNO | Pedido #1 | local
+Cliente: Cliente de revisión | Tel.: 71234568
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+2 x Combo de revisión @ Bs 22.50 | promoción -0.00 | Bs 45.00
+Subtotal: Bs 45.00
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 0.00
+Total: Bs 45.00
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | REGISTRADO
+ID del pedido: SABOR VALLUNO | Pedido #1 | local
+Cliente: Cliente de revisión | Tel.: 71234568
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+2 x Combo de revisión @ Bs 22.50 | promoción -0.00 | Bs 45.00
+Subtotal: Bs 45.00
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 0.00
+Total: Bs 45.00
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | REGISTRADO
+ID del pedido: SABOR VALLUNO | Pedido #1 | local
+Cliente: Cliente de revisión | Tel.: 71234568
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+2 x Combo de revisión @ Bs 22.50 | promoción -0.00 | Bs 45.00
+Subtotal: Bs 45.00
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 0.00
+Total: Bs 45.00
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+Pago: 1 Efectivo, 2 QR, 3 Tarjeta: SABOR VALLUNO | Pedido #1 | local
+Cliente: Cliente de revisión | Tel.: 71234568
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+2 x Combo de revisión @ Bs 22.50 | promoción -0.00 | Bs 45.00
+Subtotal: Bs 45.00
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 0.00
+Total: Bs 45.00
+Tarjeta | pago #1 | cobrado Bs 46.35
+Ajuste de cobro: Bs 1.35
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | REGISTRADO
+ID del pedido: Siguientes estados: EN_PREPARACION, CANCELADO
+Nuevo estado: SABOR VALLUNO | Pedido #1 | local
+Cliente: Cliente de revisión | Tel.: 71234568
+Registro: 2026-11-23 23:05
+Estado: EN_PREPARACION | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+2 x Combo de revisión @ Bs 22.50 | promoción -0.00 | Bs 45.00
+Subtotal: Bs 45.00
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 0.00
+Total: Bs 45.00
+Tarjeta | pago #1 | cobrado Bs 46.35
+Ajuste de cobro: Bs 1.35
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | EN_PREPARACION
+ID del pedido: Siguientes estados: LISTO
+Nuevo estado: SABOR VALLUNO | Pedido #1 | local
+Cliente: Cliente de revisión | Tel.: 71234568
+Registro: 2026-11-23 23:05
+Estado: LISTO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+2 x Combo de revisión @ Bs 22.50 | promoción -0.00 | Bs 45.00
+Subtotal: Bs 45.00
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 0.00
+Total: Bs 45.00
+Tarjeta | pago #1 | cobrado Bs 46.35
+Ajuste de cobro: Bs 1.35
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | LISTO
+ID del pedido: Siguientes estados: ENTREGADO
+Nuevo estado: SABOR VALLUNO | Pedido #1 | local
+Cliente: Cliente de revisión | Tel.: 71234568
+Registro: 2026-11-23 23:05
+Estado: ENTREGADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+2 x Combo de revisión @ Bs 22.50 | promoción -0.00 | Bs 45.00
+Subtotal: Bs 45.00
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 0.00
+Total: Bs 45.00
+Tarjeta | pago #1 | cobrado Bs 46.35
+Ajuste de cobro: Bs 1.35
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: Cliente de demostración
+2: Cliente de revisión
+ID de cliente: Modalidad: 1 Local, 2 Llevar, 3 Delivery: Pedido #2 creado. Agregue productos con la opción 6.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | ENTREGADO
+2: llevar | Cliente de demostración | REGISTRADO
+ID del pedido: 1 Agregar producto | 2 Quitar producto: 1: Silpancho | Bs 35.00
+2: Pique macho | Bs 45.00
+3: Chicharrón | Bs 40.00
+4: Sopa de maní | Bs 15.00
+5: Mocochinchi vaso | Bs 6.00
+6: Mocochinchi jarra | Bs 18.00
+7: Gaseosa vaso | Bs 5.00
+8: Combo silpancho y mocochinchi | Bs 36.90
+9: Combo anidado familiar | Bs 73.71
+10: Plato de revisión | Bs 20.00
+11: Refresco de revisión | Bs 5.00
+12: Combo de revisión | Bs 22.50
+ID del producto: Cantidad (1–20): SABOR VALLUNO | Pedido #2 | llevar
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+1 x Combo anidado familiar @ Bs 73.71 | promoción -0.00 | Bs 73.71
+Subtotal: Bs 73.71
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 4.00
+Total: Bs 77.71
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | ENTREGADO
+2: llevar | Cliente de demostración | REGISTRADO
+ID del pedido: SABOR VALLUNO | Pedido #2 | llevar
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+1 x Combo anidado familiar @ Bs 73.71 | promoción -0.00 | Bs 73.71
+Subtotal: Bs 73.71
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 4.00
+Total: Bs 77.71
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+Pago: 1 Efectivo, 2 QR, 3 Tarjeta: Monto recibido en Bs: SABOR VALLUNO | Pedido #2 | llevar
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+1 x Combo anidado familiar @ Bs 73.71 | promoción -0.00 | Bs 73.71
+Subtotal: Bs 73.71
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 4.00
+Total: Bs 77.71
+Efectivo | pago #2 | cobrado Bs 77.71 | recibido 100.00 | cambio 22.29
+Ajuste de cobro: Bs 0.00
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: Cliente de demostración
+2: Cliente de revisión
+ID de cliente: Modalidad: 1 Local, 2 Llevar, 3 Delivery: Zona (Cercado/Quillacollo/Sacaba/Vinto): Dirección de entrega: Pedido #3 creado. Agregue productos con la opción 6.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | ENTREGADO
+2: llevar | Cliente de demostración | REGISTRADO
+3: delivery | Cliente de demostración | REGISTRADO
+ID del pedido: 1 Agregar producto | 2 Quitar producto: 1: Silpancho | Bs 35.00
+2: Pique macho | Bs 45.00
+3: Chicharrón | Bs 40.00
+4: Sopa de maní | Bs 15.00
+5: Mocochinchi vaso | Bs 6.00
+6: Mocochinchi jarra | Bs 18.00
+7: Gaseosa vaso | Bs 5.00
+8: Combo silpancho y mocochinchi | Bs 36.90
+9: Combo anidado familiar | Bs 73.71
+10: Plato de revisión | Bs 20.00
+11: Refresco de revisión | Bs 5.00
+12: Combo de revisión | Bs 22.50
+ID del producto: Cantidad (1–20): SABOR VALLUNO | Pedido #3 | delivery
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+2 x Combo silpancho y mocochinchi @ Bs 36.90 | promoción -0.00 | Bs 73.80
+Subtotal: Bs 73.80
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 15.00
+Total: Bs 88.80
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | ENTREGADO
+2: llevar | Cliente de demostración | REGISTRADO
+3: delivery | Cliente de demostración | REGISTRADO
+ID del pedido: SABOR VALLUNO | Pedido #3 | delivery
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+2 x Combo silpancho y mocochinchi @ Bs 36.90 | promoción -0.00 | Bs 73.80
+Subtotal: Bs 73.80
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 15.00
+Total: Bs 88.80
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+Pago: 1 Efectivo, 2 QR, 3 Tarjeta: Código de transacción de 10 dígitos: SABOR VALLUNO | Pedido #3 | delivery
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+2 x Combo silpancho y mocochinchi @ Bs 36.90 | promoción -0.00 | Bs 73.80
+Subtotal: Bs 73.80
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 15.00
+Total: Bs 88.80
+QR | pago #3 | cobrado Bs 88.80 | transacción 0000000001
+Ajuste de cobro: Bs 0.00
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: Cliente de demostración
+2: Cliente de revisión
+ID de cliente: Modalidad: 1 Local, 2 Llevar, 3 Delivery: Pedido #4 creado. Agregue productos con la opción 6.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | ENTREGADO
+2: llevar | Cliente de demostración | REGISTRADO
+3: delivery | Cliente de demostración | REGISTRADO
+4: llevar | Cliente de demostración | REGISTRADO
+ID del pedido: 1 Agregar producto | 2 Quitar producto: 1: Silpancho | Bs 35.00
+2: Pique macho | Bs 45.00
+3: Chicharrón | Bs 40.00
+4: Sopa de maní | Bs 15.00
+5: Mocochinchi vaso | Bs 6.00
+6: Mocochinchi jarra | Bs 18.00
+7: Gaseosa vaso | Bs 5.00
+8: Combo silpancho y mocochinchi | Bs 36.90
+9: Combo anidado familiar | Bs 73.71
+10: Plato de revisión | Bs 20.00
+11: Refresco de revisión | Bs 5.00
+12: Combo de revisión | Bs 22.50
+ID del producto: Cantidad (1–20): SABOR VALLUNO | Pedido #4 | llevar
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+1 x Silpancho @ Bs 35.00 | promoción -0.00 | Bs 35.00
+Subtotal: Bs 35.00
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 2.00
+Total: Bs 37.00
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | ENTREGADO
+2: llevar | Cliente de demostración | REGISTRADO
+3: delivery | Cliente de demostración | REGISTRADO
+4: llevar | Cliente de demostración | REGISTRADO
+ID del pedido: 1 Agregar producto | 2 Quitar producto: ID del producto a quitar: SABOR VALLUNO | Pedido #4 | llevar
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 23:05
+Estado: REGISTRADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+Subtotal: Bs 0.00
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 0.00
+Total: Bs 0.00
+PENDIENTE DE PAGO. Simulación académica; no es factura fiscal.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: local | Cliente de revisión | ENTREGADO
+2: llevar | Cliente de demostración | REGISTRADO
+3: delivery | Cliente de demostración | REGISTRADO
+4: llevar | Cliente de demostración | REGISTRADO
+ID del pedido: Siguientes estados: EN_PREPARACION, CANCELADO
+Nuevo estado: SABOR VALLUNO | Pedido #4 | llevar
+Cliente: Cliente de demostración | Tel.: 70000001
+Registro: 2026-11-23 23:05
+Estado: CANCELADO | Variante: A
+En la variante A, los precios de combos ya incluyen el 10 % de descuento.
+Subtotal: Bs 0.00
+Descuento adicional del pedido: Bs 0.00
+Cargos: Bs 0.00
+Total: Bs 0.00
+PEDIDO CANCELADO. No corresponde cobrar.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: Silpancho | Bs 35.00
+2: Pique macho | Bs 45.00
+3: Chicharrón | Bs 40.00
+4: Sopa de maní | Bs 15.00
+5: Mocochinchi vaso | Bs 6.00
+6: Mocochinchi jarra | Bs 18.00
+7: Gaseosa vaso | Bs 5.00
+8: Combo silpancho y mocochinchi | Bs 36.90
+9: Combo anidado familiar | Bs 73.71
+10: Plato de revisión | Bs 20.00
+11: Refresco de revisión | Bs 5.00
+12: Combo de revisión | Bs 22.50
+ID del combo: 1 Agregar componente | 2 Quitar componente: ID del componente: Combo actualizado: Bs 27.00. Las cotizaciones de pedidos existentes se conservan.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: 1: Silpancho | Bs 35.00
+2: Pique macho | Bs 45.00
+3: Chicharrón | Bs 40.00
+4: Sopa de maní | Bs 15.00
+5: Mocochinchi vaso | Bs 6.00
+6: Mocochinchi jarra | Bs 18.00
+7: Gaseosa vaso | Bs 5.00
+8: Combo silpancho y mocochinchi | Bs 36.90
+9: Combo anidado familiar | Bs 73.71
+10: Plato de revisión | Bs 20.00
+11: Refresco de revisión | Bs 5.00
+12: Combo de revisión | Bs 27.00
+ID del combo: 1 Agregar componente | 2 Quitar componente: ID del componente: Combo actualizado: Bs 22.50. Las cotizaciones de pedidos existentes se conservan.
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Fecha AAAA-MM-DD (vacío = hoy): {
+  "fecha": "2026-11-23",
+  "por_modalidad": {
+    "local": {
+      "pedidos": 1,
+      "total_pedidos": "45.00",
+      "cobrado": "46.35"
+    },
+    "llevar": {
+      "pedidos": 1,
+      "total_pedidos": "77.71",
+      "cobrado": "77.71"
+    },
+    "delivery": {
+      "pedidos": 1,
+      "total_pedidos": "88.80",
+      "cobrado": "88.80"
+    }
+  },
+  "top_3": [
+    {
+      "id_producto": 8,
+      "nombre": "Combo silpancho y mocochinchi",
+      "cantidad": 2
+    },
+    {
+      "id_producto": 12,
+      "nombre": "Combo de revisión",
+      "cantidad": 2
+    },
+    {
+      "id_producto": 9,
+      "nombre": "Combo anidado familiar",
+      "cantidad": 1
+    }
+  ],
+  "criterio_top": "lineas",
+  "cobrado_total": "212.86"
+}
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Ruta JSON (vacío = datos/restaurante.json): Guardado en C:\Users\HP\AppData\Local\Temp\tmpd79hbemb\revision.json
+
+1 Registrar producto/combo   2 Menú disponible   3 Registrar cliente
+4 Ver clientes              5 Crear pedido      6 Agregar/quitar productos
+7 Detalle de pedido         8 Cambiar estado    9 Cobrar
+10 Reporte diario           11 Guardar JSON     12 Cargar JSON
+13 Cargar datos demo        Variante asignada: A
+15 Editar componentes de combo                  0 Salir
+Opción: Fin. Use Guardar JSON antes de salir si desea conservar los datos.

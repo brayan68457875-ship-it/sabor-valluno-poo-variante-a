@@ -27,8 +27,8 @@ class ReglasVariante:
         self._minimo_platos_local = 0
         self._descuento_local = Decimal('0')
         self._paso_redondeo_efectivo = None
-        propuestas = {'conteo_productos_c': 'hojas', 'promo_dentro_combos': False, 'top_productos': 'lineas', 'consultas_confirmadas': False}
-        propuestas.update(decisiones or {})
+        propuestas = {'conteo_productos_c': 'hojas', 'promo_dentro_combos': False, 'top_productos': 'lineas'}
+        propuestas.update({clave: valor for clave, valor in (decisiones or {}).items() if clave in propuestas})
         if propuestas['conteo_productos_c'] not in ('hojas', 'componentes', 'unidad'):
             raise ValueError('Conteo C: hojas, componentes o unidad.')
         if propuestas['top_productos'] not in ('lineas', 'hojas'):

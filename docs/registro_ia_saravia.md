@@ -3,20 +3,20 @@
 Estudiante: Brayan Saravia Garay  
 Variante asignada: A, informada por Brayan el 23/11/2026  
 Paralelo: B  
-Semana/fase real: pendiente de completar por el estudiante  
+Fase actual: integración y revisión; no acredita fases anteriores  
 Docente: Ing. Roy Carrasco
 
-Este registro se centra en la generación del proyecto y su adaptación a la variante A. Las valoraciones de comprensión y las decisiones de aceptación corresponden a Brayan y siguen pendientes de revisión.
+Este registro se centra en la generación del proyecto y su adaptación a la variante A. Las valoraciones de comprensión y las decisiones de aceptación corresponden a Brayan.
 
 | N.º | Fecha | Herramienta | Tipo | Consulta textual | Qué acepté | Qué modifiqué y por qué | Archivo o clase | ¿Lo explico sin ayuda? |
 |---|---|---|---|---|---|---|---|---|
-| 1 | 22/11/2026 | Codex de OpenAI | Generación de proyecto | ahora quiero que me lo hagas todo lo qeu esta solicitando el documento, y me infromes lo que tiene que tener mis datos , todo siempre en base al diagrama  que me proporcionaste | Pendiente de revisión personal | Pendiente de completar con cambios reales | Código, pruebas y docs | Pendiente |
+| 1 | 22/11/2026 | Codex de OpenAI | Generación de proyecto | ahora quiero que me lo hagas todo lo qeu esta solicitando el documento, y me infromes lo que tiene que tener mis datos , todo siempre en base al diagrama  que me proporcionaste | Por revisar personalmente | Registrar únicamente cambios personales reales | Código, pruebas y docs | Pendiente |
 
 ## Declaración que se firma después de revisar
 
 Declaro haber revisado los usos de IA descritos en este registro y poder explicar el código que entrego.
 
-**Estado de la declaración:** pendiente de revisión y firma del estudiante; la herramienta no afirma que ya se haya cumplido.
+**Estado de la declaración:** sin firma incorporada; la herramienta no acredita comprensión ni revisión personal.
 
 Firma: ____________________  
 Fecha real de firma: ____________________
@@ -31,7 +31,7 @@ Consulta textual:
 
 > ya tengo el dato de la variante ,quiero que lo hagas con la variante A
 
-Se preparó una entrega exclusiva A: inicio directo, reglas A, diagrama, ejemplos y pruebas enfocados en A. La variante la informó el estudiante; no se registra como respuesta directa obtenida del docente. Las consultas de negocio continúan pendientes. Aceptación y comprensión personal del código: pendientes de revisión por Brayan.
+Se preparó una entrega exclusiva A: inicio directo, reglas A, diagrama, ejemplos y pruebas enfocados en A. La variante la informó el estudiante; no se registra como respuesta directa obtenida del docente. El alcance vigente se registra en el acta. La aceptación y comprensión personal deben ser revisadas por Brayan.
 
 ## Registro de incorporación a Git · 23/11/2026
 
@@ -41,4 +41,12 @@ Consulta textual:
 
 > muy bien ahora en vscode del sistema de sabor valluno , abre y realiza minimamente 8 commits como esta solicitando el documento
 
-Se organizó la incorporación del proyecto existente en ocho bloques de archivos. Los commits usan las fechas actuales de Git y la identidad indicada por el usuario. No representan desarrollo en semanas anteriores. Se verificó la ejecución de 31 pruebas. Revisión y comprensión personal del estudiante: pendientes.
+Se organizó la incorporación del proyecto existente en ocho bloques de archivos. Los commits usan las fechas actuales de Git y la identidad indicada por el usuario. No representan desarrollo en semanas anteriores. Se verificó la ejecución de 31 pruebas. La revisión y comprensión personal corresponden al estudiante.
+
+## Revisión del alcance · 23/11/2026
+
+Herramienta: Codex de OpenAI. Uso: revisión de requisitos y ajustes de código y documentos.
+
+Consulta: «quiero que una vez mas revises el documento y veas y si falta cumplir algo pra que lo vayamos ejecutando».
+
+El estudiante proporcionó la institución Universidad Adventista de Bolivia y pidió descartar las cuestiones de retrasos y consultas del reporte. Se retiraron retrasos/compensaciones y sus avisos, se mantuvo el top 3 por cantidad de líneas vendidas y se aclaró el descuento ya incluido en combos. El cambio de alcance procede del estudiante, sin afirmar aprobación docente. La revisión personal del material corresponde a Brayan.

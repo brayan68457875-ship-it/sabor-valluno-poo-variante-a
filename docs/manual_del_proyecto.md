@@ -7,7 +7,7 @@ Ing. Roy Carrasco · Entrega 24 de noviembre de 2026
 
 Sabor Valluno registra pedidos de comida típica y necesita calcular correctamente combos, envases, envíos y cobros. Una suma manual puede olvidar que un combo contiene otros productos o que un envío cambia según la zona. El programa reúne esas reglas en objetos y permite atender un pedido completo desde su registro hasta su entrega.
 
-El resultado es una aplicación de consola, sin paquetes externos, con las clases del diagrama suministrado. Aplica la variante A, confirmada por Brayan el 23/11/2026; la versión anterior con seis perfiles se reemplaza para esta entrega. Las decisiones no confirmadas se conservan identificadas en el acta.
+El resultado es una aplicación de consola, sin paquetes externos, con las clases del diagrama suministrado. Aplica la variante A, confirmada por Brayan el 23/11/2026; la versión anterior con seis perfiles se reemplaza para esta entrega. El alcance ajustado se registra en el acta.
 
 ## Objetivos
 
@@ -26,7 +26,7 @@ El objetivo general es administrar el ciclo de pedidos con un modelo coherente d
 | Pedido | Cliente, fecha, estado, detalles y pago; controla edición, subtotal, total y transiciones. |
 | Local | Mesa de 1 a 15; sin cargos adicionales ni descuento local. |
 | Llevar | Envases: Bs 2 por cada plato, incluidos los de combos anidados. |
-| Delivery | Zona, dirección, tarifas y fecha de entrega; verifica mínimo, medios de pago y retraso. |
+| Delivery | Zona, dirección, tarifas y fecha de entrega; verifica el mínimo y los medios de pago. |
 | DetalleProducto | Producto, cantidad y cotización histórica; calcula el subtotal y las promociones de la línea. |
 | MetodoPago | Contrato abstracto del procesamiento del cobro. |
 | Efectivo | Monto recibido suficiente y cambio; sin redondeo adicional en A. |
@@ -79,7 +79,7 @@ El descuento de combo ya está incorporado en el precio del producto y no se vue
 
 ## Caso de referencia recalculado
 
-Silpancho Bs 35 y mocochinchi vaso Bs 6 suman Bs 41. Se venden dos combos por delivery a Quillacollo, donde el envío vale Bs 15. El caso se evalúa fuera de una promoción de martes.
+Silpancho Bs 35 y mocochinchi vaso Bs 6 suman Bs 41. Se venden dos combos por delivery a Quillacollo, donde el envío vale Bs 15. El caso se evalúa sin promociones adicionales (la variante A no tiene 2×1).
 
 | Perfil | Cálculo de un combo | Precio combo | Total de dos con envío |
 |---|---|---|---|
@@ -105,23 +105,21 @@ El registro puede comenzar sin productos, pero no se confirma ni se cobra vacío
 
 La mesa debe estar entre 1 y 15. `Restaurante` revisa los pedidos abiertos antes de registrar otro en esa mesa. Entregar o cancelar libera la mesa. Cobrar no la libera automáticamente porque un pedido pagado todavía puede estar en preparación.
 
-Por consistencia de esta implementación, un pedido cobrado ya no admite edición ni cancelación simple, aunque permanezca REGISTRADO. La guía no define un circuito de reembolsos por cancelación después de cobrar; esa decisión adicional está incluida en las consultas pendientes.
+Por consistencia de esta implementación, un pedido cobrado ya no admite edición ni cancelación simple, aunque permanezca REGISTRADO. La guía no define un circuito de reembolsos por cancelación después de cobrar; esta implementación mantiene ese bloqueo para conservar la consistencia del cobro.
 
-## Pagos y compensación
+## Pagos
 
 Efectivo valida que el monto recibido cubra el total y conserva el cambio. QR requiere diez dígitos ASCII; se conserva como texto para no perder ceros iniciales. El gestor rechaza identificadores de pago repetidos y códigos QR ya utilizados. Tarjeta cobra 3 % adicional y responde `False` a `permite_delivery()`.
 
 Se trata de una simulación académica. No se conectan bancos, pasarelas ni lectores QR; el código de transacción se registra manualmente. No se guardan números completos de tarjeta ni datos bancarios.
 
-La fuente proporcionada incluye como respuesta que existe retraso cuando pasan más de 60 minutos desde el registro y corresponde devolver el costo del envío. A los 60 minutos exactos no hay compensación. Un envío que ya era gratuito produce compensación de Bs 0, porque ese fue el importe cobrado por envío.
-
-`calcular_retraso()` devuelve minutos que exceden el límite. `calcular_compensacion()` devuelve el importe que correspondería reembolsar. El sistema lo informa, pero no acredita que el dinero haya sido devuelto. El acta mantiene pendiente la consulta real al docente.
+El alcance actual excluye el seguimiento de retrasos y la compensación, por indicación del estudiante registrada en el acta.
 
 ## Reportes
 
-El reporte diario incluye los pedidos cobrados en la fecha del pago, agrupados por local, llevar y delivery. Presenta número de pedidos, suma de totales comerciales, dinero efectivamente cobrado y compensación calculada. Esta separación evita confundir la comisión de tarjeta con el total del pedido.
+El reporte diario incluye los pedidos cobrados en la fecha del pago, agrupados por local, llevar y delivery. Presenta número de pedidos, suma de totales comerciales, dinero efectivamente cobrado. Esta separación evita confundir la comisión de tarjeta con el total del pedido.
 
-El top 3 ordena por cantidad descendente y, ante empate, por identificador ascendente. Con el criterio propuesto `lineas`, un combo vendido cuenta como combo; con `hojas`, se desglosan sus productos finales. No se cuentan pedidos cancelados ni pendientes de cobro. La interpretación comercial debe confirmarse antes de afirmar que es la exigida por el docente.
+El top 3 ordena por cantidad descendente y, ante empate, por identificador ascendente. Con el criterio propuesto `lineas`, un combo vendido cuenta como combo; con `hojas`, se desglosan sus productos finales. No se cuentan pedidos cancelados ni pendientes de cobro. El alcance actual utiliza el criterio lineas, indicado en la configuración y en el acta.
 
 ## Persistencia JSON
 
@@ -135,4 +133,4 @@ El JSON conserva las cotizaciones históricas y sus propias decisiones. Editar `
 
 `pruebas.py` contiene casos con `assert` para la referencia A y sus límites, recursión, ciclos, disponibilidad, promociones, envases, mínimos, límites, estados, cobro, reportes y JSON. El resultado real de la ejecución se encuentra en `resultados_pruebas.txt`.
 
-El código y los documentos no sustituyen la revisión del estudiante. Brayan debe completar los datos pendientes, confirmar las consultas, declarar el uso de IA, conservar el proceso real y practicar la defensa. El proyecto no incluye commits retroactivos, firmas ni respuestas docentes inventadas.
+El código y los documentos no sustituyen la revisión del estudiante. Brayan debe revisar los datos registrados, declarar el uso de IA, conservar el proceso real y practicar la defensa. El proyecto no incluye commits retroactivos, firmas ni respuestas docentes inventadas.
